@@ -1,0 +1,29 @@
+# Tyrex window decoration theme
+
+Style * Button 2
+Style * Button 4
+Style * NoButton 5
+Style * Button 6
+Style * NoButton 7
+Style * NoButton 8
+Style * NoButton 9
+Style * NoButton 0
+Style * Font "xft:AvantGarde LT Medium:pixelsize=11"
+Style * UseDecor Tyrex
+
+DestroyDecor recreate Tyrex
+AddToDecor Tyrex
++ ButtonStyle All - Clear
++ ButtonStyle 1 MiniIcon
++ ButtonStyle 2 Active (Pixmap themes/$[ThemeColor]/close-right-active.png) Inactive (Pixmap themes/$[ThemeColor]/close-right-inactive.png) ActiveDown (Pixmap themes/$[ThemeColor]/close-right-down.png)
++ ButtonStyle 4 Active (Pixmap themes/$[ThemeColor]/maximize-active.png) Inactive (Pixmap themes/$[ThemeColor]/maximize-inactive.png) ActiveDown (Pixmap themes/$[ThemeColor]/maximize-down.png)
++ ButtonStyle 6 Active (Pixmap themes/$[ThemeColor]/iconify-active.png) Inactive (Pixmap themes/$[ThemeColor]/iconify-inactive.png) ActiveDown (Pixmap themes/$[ThemeColor]/iconify-down.png)
++ ButtonStyle All -- flat usetitlestyle
++ TitleStyle AllActive (Colorset 7) AllInactive (Colorset 7) -- flat
++ TitleStyle AllActive TiledPixmap themes/$[ThemeColor]/title-active.png -- Flat
++ TitleStyle AllInActive TiledPixmap themes/$[ThemeColor]/title-inactive.png -- Flat
++ TitleStyle LeftJustified Height 22 -- flat
+
+
+# Space holder
+Style ** EWMHMiniIconOverride, IconOverride, MiniIcon none.png

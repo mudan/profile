@@ -1,0 +1,89 @@
+# Root Menus
+Mouse 1		R       A   	-
+Mouse 2     	R       A   	Menu MenuFvwmRoot
+Mouse 3     	R       A   	Menu /Applications
+Mouse 4     	R_>vI   N   	Scroll -100000 +0
+Mouse 5     	R_>vI   N   	Scroll +100000 +0
+# Titlebar Buttons
+Mouse 1		1	A	CloseItOnDoubleClick
+Mouse 3     	1       A   	Menu MenuFvwmWindowOps
+Mouse 1     	6       A   	MinItOnMouseUp
+Mouse 1     	4       A   	MaxItOnMouseUp
+Mouse 1     	2       A   	CloseItOnMouseUp
+# Window, Frame, Side, Others
+Mouse 1     	FS      A 	ResizeFunc
+Mouse 1     	W       M  	MoveFunc
+Mouse 3     	W       M  	ResizeFunc
+Mouse 2     	TSIF	A 	RaiseLower
+Mouse 3     	T    	A   	RaiseAndMenu
+# Icons Binding
+Mouse 1     	I     	A   	DeiconifyAndRearrange
+# Wheel Toggle Shade
+Mouse 4     	T     	N   	WindowShade True
+Mouse 5     	T     	N   	WindowShade False
+
+# Alt + Right-click to resize app
+AddToFunc ResizeFunc "M" Resize
+# Alt + Left-click to move app
+AddToFunc MoveFunc   "M" Move
+
+# Alt + Escape for FvwmProxy
+#Key Escape  	A 	M   	SendToModule FvwmProxy ShowToggle
+# Alt + Tab for WindowList
+Key Tab 	A 	M 	WindowList Root c c FlipFocus NoCurrentDeskTitle SelectOnRelease Alt_L
+# F1 for open/close terminal
+Key F1		A	4	irc
+Key F2		A	4	Playlist
+
+# The following keys probably need to be set by you to work.
+# I have "Menu" as the Windows Key and "Print" as the Print Screen key.
+# See http://edulinux.homeunix.org/~n6tadam/fvwm/tips/misc/modifiers.txt
+# for more information.
+
+# Windows key to pop up Applications Menu
+Key Menu	A	N	Menu /Applications
+# Print Screen key to take screenshot
+Key Print 	A 	N 	Exec exec import -window root ~/screenshot.png
+
+DestroyFunc RaiseAndMenu
+AddToFunc RaiseAndMenu
++ I Raise
++ I Menu MenuFvwmWindowOps
+
+# The following are used so that functions occur on the mouse up of a titlebar
+DestroyFunc MaxItOnMouseUp
+AddToFunc MaxItOnMouseUp
++ C Maximize
+DestroyFunc MinItOnMouseUp
+AddToFunc MinItOnMouseUp
++ C Thumbnail
+DestroyFunc CloseItOnMouseUp
+AddToFunc CloseItOnMouseUp
++ C Close
+
+# This is used for double-clicking on the app icon in the titlebar
+DestroyFunc CloseItOnDoubleClick
+AddToFunc CloseItOnDoubleClick
++ D Close
+
+#Windows Key to launch terminal
+#Key Super_L A N Exec exec urxvt -bg white -fg black +sb -fn "xft:Bitstream Vera Sans Mono:pixelsize=12"
+
+# 全屏显示
+DestroyFunc FuncFullScreen
+AddtoFunc FuncFullScreen
++ I Current (State 0) Fullscreen-Stop 
++ I TestRc Current (Maximizable) Fullscreen-Start
+DestroyFunc Fullscreen-Start
+AddtoFunc Fullscreen-Start
++ I WindowStyle NoTitle,HandleWidth 0,FixedSize,FixedPosition
++ I Current (!Maximized) Maximize
++ I ResizeMaximize 100 100
++ I State 0 true
+DestroyFunc Fullscreen-Stop
+AddtoFunc Fullscreen-Stop
++ I DestroyWindowStyle
++ I State 0 false
++ I Maximize
+# Win + f
+Key f A 4 FuncFullScreen

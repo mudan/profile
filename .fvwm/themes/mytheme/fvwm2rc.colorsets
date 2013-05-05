@@ -1,0 +1,22 @@
+#Window Title Inactive
+Colorset 1 fg #000000, bg #000000, fgsh #000000, NoShape, RootTransparent, Tint #283e5e 70, IconAlpha 60
+#Windows Title Active
+Colorset 2 fg #b3bfa7, bg #000000, fgsh #000000, Noshape, RootTransparent, Tint #101f36 70, IconAlpha 60
+# Inactive Menu
+Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
+# Active Menu
+Colorset 4 fg #ffffff, hi #000000, bg #b3bfa7
+# Dock Colorset
+Colorset 5 fg #DDDDDD, bg #ffffff, hi #dde5ec, sh #a6bbce, RootTransparent , IconAlpha 100
+# MPD Player
+Colorset 6 fg #ffcb48, bg #414809, hi #414809, sh #414809, RootTransparent
+#AppLaunch
+Colorset 7 fg white, bg black, RootTransparent buffer, Tint #000000 40
+#Pager and docks
+Colorset 8 fg white, bg black, RootTransparent buffer, Tint #7f8a79 80
+
+#Pager
+Colorset 77 fg black, bg black, RootTransparent buffer, Tint #000000 40
+
+#Clock
+Colorset 78 fg #98c2c7, bg black, RootTransparent buffer, Tint #000000 40

@@ -1,0 +1,823 @@
+WindowTitle     {Calendar}
+WindowSize      158 140
+WindowPosition	1112 847
+Colorset        7
+
+Init
+Begin
+	Set $DayNameClr = (GetOutput {echo "$DayNameColor"} 1 -1)
+	Set $DayNumClr = (GetOutput {echo "$DayNumColor"} 1 -1)
+	Set $DayHiClr = (GetOutput {echo "$DayHiColor"} 1 -1)
+
+        Set $Header = (GetOutput {cal} 1 -1)
+        ChangeTitle 43 $Header
+
+	# Find position of "1" in first line:
+	Set $firstline = (GetOutput {cal} 3 -1)
+	Set $xpos = 3
+	For $i=1 To 7 Do
+	Begin
+		Set $out = {"} $firstline {"}
+		If (StrCopy $out $xpos $xpos)==1 Then
+			Set $Position = $i
+		Set $xpos = (Add $xpos 3)
+	End
+
+	# Find largest day in month:
+	For $i=28 To 31 Do
+	Begin
+		Set $out = {cal | grep } $i { | sed -e 's/ //g'}
+		If (GetOutput $out 1 -1)>0 Then
+			Set $LargDay = $i
+	End
+
+	# Put the days to the widgets:
+	Set $DayNum = 0
+	For $widget=1 To 42 Do
+	Begin
+		If $widget>=$Position Then
+		Begin
+			Set $DayNum = (Add $DayNum 1)
+			If $DayNum<=$LargDay Then
+			Begin
+				ChangeTitle $widget $DayNum
+				ChangeBackColor $widget $DayNumClr
+			End
+		End
+	End
+
+	# Highlight current day:
+	Set $CurrDayNum = (GetOutput {date | cut -c9-10} 1 -1)
+	Set $CurrWidget = (Add $CurrDayNum (Add $Position -1))
+	ChangeBackColor $CurrWidget $DayHiClr
+	Set $NewFont = {shadow=0 se:xft:Verdana:size=8:bold}
+	ChangeFont $CurrWidget $NewFont
+
+	# Add day names to header:
+        Set $Header = (GetOutput {cal} 2 -1)
+	For $widget=44 To 50 Do
+	Begin
+		Set $field = (Add $widget -43)
+		Set $out = {exec echo "} $Header {" | cut -d" " -f} $field
+		Set $Dayname = (GetOutput $out 1 -1)
+		ChangeTitle $widget $Dayname
+		ChangeBackColor $widget $DayNameClr
+	End
+End
+
+PeriodicTasks
+Begin
+        If (RemainderOfDiv (GetTime) 45)==0 Then
+        Begin
+       	End
+End
+
+Widget                  1
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  2
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  3
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  4
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  5
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  6
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  7
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 45
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  8
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  9
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  10
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  11
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  12
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  13
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  14
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 60
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  15
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  16
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  17
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  18
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  19
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  20
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  21
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 75
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  22
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  23
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  24
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  25
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  26
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  27
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  28
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 90
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  29
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  30
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  31
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  32
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  33
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  34
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  35
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 105
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  36
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  37
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  38
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  39
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  40
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  41
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  42
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 120
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString Right
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  43
+Property
+        Type            ItemDraw
+        Size            138 15
+        Position        12 5
+        Font            "shadow=0 se:xft:Verdana:size=10"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  44
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        10 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  45
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        30 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  46
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        50 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  47
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        70 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  48
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        90 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  49
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        110 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
+
+Widget                  50
+Property
+        Type            ItemDraw
+        Size            18 14
+        Position        130 30
+        Font            "shadow=0 se:xft:Verdana:size=7"
+        Flags           NoFocus NoReliefString
+Main
+Case message of
+	SingleClic:
+	Begin
+		Quit
+	End
+End
