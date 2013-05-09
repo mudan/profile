@@ -18,7 +18,7 @@ set list	"显示 TAB 和 $
 set listchars=tab:\|\ ,
 set shiftwidth=4		"现在自动缩进将是4个字符
 set autowrite	"自动保存
-set backup	"保存后生成备份文件
+"set backup	"保存后生成备份文件
 set backupext=.bak		"备份文件后缀名为.bak
 set clipboard+=unnamed		"Vim 的默认寄存器和系统剪贴板共享
 set wildmenu	"启用文本模式的菜单
@@ -61,14 +61,14 @@ if &t_Co > 2 || has("gui_running")
     set hlsearch
 endif
 
-if has("gui_running")
-        set guioptions-=m       "隐藏菜单栏
-        set guioptions-=T       "隐藏工具栏
-        "set guioptions-=L       "隐藏左侧滚动条
-        "set guioptions-=r       "隐藏右侧滚动条
-        "set guioptions-=b       "隐藏底部滚动条
-        "set showtabline=0       "隐藏Tab栏
-endif
+"if has("gui_running")
+"        set guioptions-=m       "隐藏菜单栏
+"        set guioptions-=T       "隐藏工具栏
+"        "set guioptions-=L       "隐藏左侧滚动条
+"        "set guioptions-=r       "隐藏右侧滚动条
+"        "set guioptions-=b       "隐藏底部滚动条
+"        "set showtabline=0       "隐藏Tab栏
+"endif
 "}}}
 
 "{{{ 函数定义
@@ -187,6 +187,14 @@ inoremap <S-Insert> <esc>"+pa
 inoremap <C-S-Insert> <esc>pa
 "map Q gq	"定义键盘映射
 ":cmap ,r  :Nread ftp://209.51.134.122/public_html/index.html	"用 VIM 通过 ftp 编辑文件
+" }}}
+
+" {{{ 杂类插件
+
+" linemovement.vim	移动行或块操作
+let g:linemovement_up="<c-Up>"
+let g:linemovement_down="<c-Down>"
+
 " }}}
 
 " {{{ NERD_tree
