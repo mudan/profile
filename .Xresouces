@@ -1,0 +1,29 @@
+!!=============================================================================
+!! RXVT-unicode setting
+!!=============================================================================
+!设置字体分辨率
+Xft.dpi:100
+URxvt.preeditType: Root !!使urxvt启动速度加快
+!设置字体
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
+!颜色
+Rxvt.background:grey30
+Rxvt.foreground:white
+Rxvt.colorBD:yellow
+Rxvt.colorUL:green
+!滚动条
+Rxvt.scrollBar:True
+Rxvt.scrollBar_right:True
+Rxvt.scrollBar_floating: False
+Rxvt.scrollstyle:plain
+!屏幕缓冲
+Rxvt.saveLines:10000
+Rxvt.color12:DodgerBlue
+Rxvt.menu:/etc/X11/rxvt.menu
+Rxvt.preeditType:Root
+!!URL操作
+URxvt.urlLauncher:firefox
+URxvt.matcher.button:1
+Urxvt.perl-ext-common:matcher
+! 开启标签功能
+URxvt.perl-ext-common: default,tabbed

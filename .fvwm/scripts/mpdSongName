@@ -1,0 +1,209 @@
+WindowTitle     {mpdSongName}
+WindowSize      395 40
+Colorset        6
+
+Init
+Begin
+	Set $toggled = 0
+        Set $prevsong = {Music stopped}
+	If (GetOutput {exec echo `mpc`|grep -o playing} 1 -1)==playing Then
+	Begin
+                Set $prevsong = (GetOutput {mpc} 1 -1)
+		ChangeTitle 5 $prevsong
+	End
+	If (GetOutput {exec echo `mpc`|grep -o paused} 1 -1)==paused Then
+	Begin
+                Set $prevsong = (GetOutput {mpc} 1 -1)
+		ChangeTitle 5 $prevsong
+	End
+	# Get music_directory from mpd.conf (and replace ~ with $[HOME] if needed)
+	Set $tilde = {~}
+	If (GetOutput {cat /etc/mpd.conf | grep music_directory | cut -d"\"" -f2 | cut -c1} 1 -1) == $tilde Then
+		Set $beginpath = (GetOutput {exec echo "$HOME"} 1 -1) (GetOutput {cat /etc/mpd.conf | grep music_directory | sed 's/\/\"/\"/' | cut -d"\"" -f2 | sed 's/~//'} 1 -1) {/}
+	Else
+		Set $beginpath = (GetOutput {cat /etc/mpd.conf | grep music_directory | sed 's/\/\"/\"/' | cut -d"\"" -f2} 1 -1) {/}
+        Set $prevpath = {}
+End
+
+PeriodicTasks
+Begin
+        Set $showcover = {false}
+	If (GetOutput {exec echo `mpc`|grep -o playing} 1 -1)==playing Then
+	Begin
+		Set $showcover = {true}
+		ChangeIcon 2 mpd/pause12.png
+                Set $song = (GetOutput {mpc} 1 -1)
+		If $song <> $prevsong Then
+	       	Begin
+			Set $prevsong = (GetOutput {mpc} 1 -1)
+	                ChangeTitle 5 $song
+		End
+        End
+	Else
+	Begin
+		ChangeIcon 2 mpd/play12.png
+		If (GetOutput {exec echo `mpc`|grep -o paused} 1 -1)<>paused Then
+		Begin
+			Set $song = {Music stopped}
+			If $song <> $prevsong Then
+			Begin
+				Set $prevsong = {Music stopped}
+				ChangeTitle 5 $song
+			End
+		End
+	End
+        If (GetOutput {exec echo `mpc`|grep -o paused} 1 -1)==paused Then
+                Set $showcover = {true}
+        If $showcover==true Then
+        Begin
+                Set $file = (GetOutput {echo `dirname "$(mpc --format %file% | head -n1)"`} 1 -1)
+                Set $path = {"} $beginpath $file {/"$CoverArt""}
+		If $prevpath <> $path Then
+		Begin
+			Set $prevpath = {"} $beginpath $file {/"$CoverArt""}
+			Set $CoverCheck = {"$FVWM_USERDIR"/scripts/FileExists.sh } $path
+			If (GetOutput $CoverCheck 1 -1)==true Then
+			Begin
+				Set $coverpath = $beginpath $file {/.fvwmcover_small.png}
+				Set $CoverCheck = {"$FVWM_USERDIR"/scripts/FileExists.sh "} $coverpath {"}
+				If (GetOutput $CoverCheck 1 -1)==false Then
+					Do {exec $[FVWM_USERDIR]/scripts/resize 25 25} { } $prevpath { "} $coverpath {"}
+				Set $AlbumChange = true
+			End
+			Else
+			Begin
+				ChangeIcon 10 cover_none.png
+			End
+		End
+        End
+        Else
+        Begin
+                If $prevpath<>cover_none.png Then
+                Begin
+                        Set $prevpath = {cover_none.png}
+			ChangeIcon 10 cover_none.png
+                End
+        End
+        If $AlbumChange == true Then
+	Begin
+		Set $CoverCheck = {"$FVWM_USERDIR"/scripts/FileExists.sh "} $coverpath {"}
+		If (GetOutput $CoverCheck 1 -1)==true Then
+		Begin
+			ChangeIcon 10 $coverpath
+			Set $coverpath2 = $beginpath $file {/.fvwmcover_large.png}
+			Set $CoverCheck = {"$FVWM_USERDIR"/scripts/FileExists.sh "} $coverpath2 {"}
+			If (GetOutput $CoverCheck 1 -1)==false Then
+				Do {exec $[FVWM_USERDIR]/scripts/resize 200 200} { } $prevpath { "} $coverpath2 {"}
+			Set $AlbumChange = false
+		End
+	End
+End
+
+Widget			1
+Property
+	Type		ItemDraw
+	Size			12 12
+	Position		270 6
+	Icon			mpd/prev12.png
+Main
+ 	Case message of
+  		SingleClic :
+   		Begin
+    			Do {exec mpc prev}
+   		End
+End
+
+Widget			2
+Property
+	Type		ItemDraw
+	Size			12 12
+	Position		290 6
+	Icon			mpd/play12.png
+Main
+ 	Case message of
+  		SingleClic :
+   		Begin
+    			Do {exec mpc toggle}
+   		End
+End
+
+Widget			3
+Property
+	Type		ItemDraw
+	Size			12 12
+	Position		310 6
+	Icon			mpd/stop12.png
+Main
+ 	Case message of
+  		SingleClic :
+   		Begin
+    			Do {exec mpc stop}
+   	End
+End
+
+Widget			4
+Property
+	Type		ItemDraw
+	Size			12 12
+	Position		330 6
+	Icon			mpd/next12.png
+Main
+ 	Case message of
+  		SingleClic :
+   		Begin
+    			Do {exec mpc next}
+   		End
+End
+
+Widget              	5
+Property
+       	Type            	ItemDraw
+       	Size            	360 15
+       	Position        	0 16
+      	Font            	"shadow=1 se:xft:FreeMono:size=7:bold:color=000000"
+	Flags           	NoFocus NoReliefString Right
+	Title			{Music Stopped}
+Main
+	Case message of
+  		SingleClic :
+   		Begin
+   		End
+End
+
+Widget			6
+Property
+	Type		ItemDraw
+	Size			12 12
+	Position		348 6
+	Icon			mpd/playlist12.png
+Main
+ 	Case message of
+  		SingleClic :
+   		Begin
+    			Do {Playlist}
+#	$[TermName] +sb -e ncmpc -m		Do {exec pympd}
+   		End
+End
+
+Widget			10
+Property
+	Type		ItemDraw
+	Size		25 25
+	Position	365 6
+	Icon		cover_none.png
+Main
+Case message of
+	SingleClic :
+	Begin
+                If $toggled==0 Then
+                Begin
+                        Set $toggled = 1
+                        Do {Module FvwmScript scripts/CoverArt}
+                End
+                Else
+                Begin
+                        Set $toggled = 0
+                        Do {KillModule FvwmScript scripts/CoverArt}
+                End
+	End
+End

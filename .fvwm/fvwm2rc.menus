@@ -1,0 +1,92 @@
+# Menu apperance settings
+MenuStyle * MenuColorset 3
+MenuStyle * ActiveColorset 4
+MenuStyle * ItemFormat "%.0p%|%3.2i%2.5l%.5l%.5r%2.3>%1|%.0p"
+MenuStyle * BorderWidth 1
+MenuStyle * HilightBack
+MenuStyle * ActiveFore
+MenuStyle * Hilight3DOff
+MenuStyle * AnimationOff
+MenuStyle * PopupOffset -2 100
+#MenuStyle * PopUpImmediately
+MenuStyle * PopUpDelayed, PopUpDelay 80
+MenuStyle * PopDownDelayed, PopDownDelay 100
+MenuStyle * TitleUnderlines0
+MenuStyle * TitleWarpOff
+MenuStyle * TrianglesSolid
+MenuStyle * VerticalItemSpacing 3 3
+MenuStyle * Font "shadow=0 se:xft:AvantGarde LT Medium Caps:size=7"
+
+DestroyMenu /Applications
+AddToMenu /Applications
++ "File Browser" Exec thunar
++ "Terminal" Exec urxvt -bg white -fg black +sb -fn "xft:Bitstream Vera Sans Mono:pixelsize=12"
++ "Program" Popup /Program
++ "Exit" Popup /Exit
+
+DestroyMenu /Exit
+AddToMenu /Exit
++			"&Close"	Close
++			"&Hide"		Iconify
++			"&Move"		Move
++			"&Resize"	Resize
++			""		  Nop
++                       "&Programs"     Popup ProgramsMenu
++                       "&Utilities"    Popup UtilitiesMenu
++			""		  Nop
++			"&Exit"		Popup ExitMenu
+
+DestroyMenu /Program
+AddToMenu /Program
++			"&Emacs"	Exec exec emacs
++			"&firefox"	Exec exec firefox
++			"&amule"	Exec exec amule
++			"&dropbox"	Exec exec dropboxd
+#+			"&stardict"	Exec exec stardict	
+#+			"&nautilus"	Exec exec nautilus
+#+			"&wesnoth"	Exec exec wesnoth
+#+			"&alsamixer"	Exec exec gnome-alsamixer
+#+			"&volumeicon"	Exec exec volumeicon
+#+			"&fcitx"	Exec exec fcitx
+#+			"&guake"	Exec exec guake
+
+DestroyMenu UtilitiesMenu
+AddToMenu UtilitiesMenu	"Utilities"	Title
++			"&Top"		Exec exec xterm -T Top -n Top -e top
++			"Xman"		Exec exec xman
++			"Xmag"		Exec exec xmag
++			""		  Nop
++                       "Reload .Xresource" Exec xrdb -load $HOME/.Xresource
+
+DestroyMenu ExitMenu
+AddToMenu ExitMenu	"Exit"		Title
++                       "&Restart FVWM"		Restart fvwm2
++			"&Logout"			Quit
+
+
+#######################################
+# Right-Click Menu on App's Titlebar
+#######################################
+
+DestroyMenu MenuFvwmWindowOps
+AddToMenu MenuFvwmWindowOps
++   "Maximize"	Pick Maximize
++   "Hide"		Pick Thumbnail
++   "Hide all others"	All (AcceptsFocus CurrentPage !Iconic !Shaded !Focused) Thumbnail
++   "Shade"		WindowShade True
++   "Stick"		Pick Stick
++   "Always on top"	Pick StaysOnTop
++   "Send to..."	Popup MenuFvwmSendTo
++   "Close"		Close
+
+DestroyMenu MenuFvwmSendTo
+AddToMenu MenuFvwmSendTo
++   "Workspace 1" MoveAndGotoPage 0 0
++   "Workspace 2" MoveAndGotoPage 1 0
++   "Workspace 3" MoveAndGotoPage 2 0
++   "Workspace 4" MoveAndGotoPage 3 0
+
+DestroyFunc MoveAndGotoPage
+AddToFunc MoveAndGotoPage
++ I MoveToPage $*
++ I GotoPage $*
