@@ -15,8 +15,10 @@ $
 
 # 命令行 历史记录 (从新到旧)：
 :q
-:w
+:markdown
+:source %
 :q!
+:w
 :NERDTree
 :h quickref
 :help k
@@ -34,15 +36,9 @@ $
 :.!=============================================================================
 :.! RXVT-unicode setting
 :b 2
-:e .fvwm/.fvwm2rc
-:Win
-:440
-:404
-:e emacs
-:new 1
-:b
 
 # 查找字符串 历史记录 (从新到旧)：
+? ^\s*$
 ?/:k
 ?/k
 ?/fc
@@ -59,44 +55,108 @@ $
 # 输入行 历史记录 (从新到旧)：
 
 # 寄存器:
-"0	LINE	0
-	exec i3
-"1	LINE	0
+"0	CHAR	0
+	" h
+""1	LINE	0
 	
 "2	LINE	0
 	
 "3	LINE	0
-	
+	# [link][]
+	snippet []
+		[${1:link_id}][]${2}
+	# [link][id]
+	snippet [[
+		[${1:link}][${2:id}]${3}
+	# [link](url)
+	snippet [(
+		[${1:link}](http://${2:url})${3}
+	# [link](email)
+	snippet [@
+		[${1:link}(mailto:${2:email})${3}
+	# [link](url "title")
+	snippet [("
+		[${1:link}](${2:url} "${3:title}")${4}
+	# [id]: url "title"
+	snippet [:
+		[${1:id}]: http://${2:url} "${3:title}"
+	# [id]: email "title"
+	snippet [:@
+		[${1:id}]: mailto:${2:url} "${3:title}"
+	# ![alt][id]
+	snippet ![
+		![${1:alt}][${2:id}]${3}
+	# ![alt](url)
+	snippet !(
+		![${1:alt}](${2:url})${3}
+	# ![alt](url "title")
+	snippet !("
+		![${1:alt}](${2:url} "${3:title}")${4}
+	# *emphasis* or _emphasis_
+	snippet *
+		*${1}*${2}
+	snippet _
+		_${1}_${2}
+	# **strong** or __strong__
+	snippet **
+		**${1}**${2}
+	snippet __
+		__${1}__${2}
+	# `code`
+	snippet `
+		\`${1}\`${2}
 "4	LINE	0
 	
 "5	LINE	0
-	
+	" Markdown
+	autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
 "6	LINE	0
 	
 "7	LINE	0
 	
 "8	LINE	0
-	【手机TXT小说下载网（www.sjtxt.com），欢迎您来sjtxt推荐好书！】   
+	
 "9	LINE	0
-	exec i3
+	
 "a@	CHAR	0
 	i"j
-""-	CHAR	0
+"-	CHAR	0
 	" h
 
 # 文件标记:
-'0  21  0  ~/.vimrc
-'1  1  0  ~/profile/.git/MERGE_MSG
-'2  48  0  ~/NERD_tree_1
-'3  1  0  ~/.ssh/id_rsa.pub
-'4  1  0  ~/profile/.git/COMMIT_EDITMSG
-'5  56  0  ~/linemovement.vim
-'6  194  31  ~/.vimrc
-'7  141  0  ~/NERD_tree_1
-'8  1  0  ~/Downloads/book/周恩来传记.txt
-'9  3074  0  ~/Downloads/book/周恩来传记.txt
+'0  1  0  ~/vim-markdown-master/README.mkd
+'1  1  0  ~/markdown-1.2.2.vba.gz
+'2  1  0  ~/markdown-1.2.2.vba
+'3  16  0  ~/vim-markdown-changes/build.vim
+'4  1  0  ~/vim-markdown-changes/build/manifest
+'5  1  0  ~/vim-markdown-changes/build/snippets/markdown.snippets
+'6  1  0  ~/vim-markdown-changes/build/ftplugin/markdown.vim
+'7  1  0  ~/vim-markdown-changes/build/ftdetect/markdown.vim
+'8  1  0  ~/vim-markdown-changes/build/compiler/markdown.vim
+'9  72  0  ~/vim-markdown-changes/build/syntax/markdown.vim
 
 # 跳转列表 (从新到旧):
+-'  1  0  ~/vim-markdown-master/README.mkd
+-'  66  0  ~/vim-markdown-master/README.mkd
+-'  1  0  ~/markdown-1.2.2.vba.gz
+-'  1  0  ~/markdown-1.2.2.vba
+-'  16  0  ~/vim-markdown-changes/build.vim
+-'  13  0  ~/vim-markdown-changes/build/NERD_tree_2
+-'  17  2  ~/vim-markdown-changes/build/NERD_tree_2
+-'  1  0  ~/vim-markdown-changes/build/NERD_tree_2
+-'  15  2  ~/vim-markdown-changes/build/NERD_tree_1
+-'  1  0  ~/vim-markdown-changes/build/NERD_tree_1
+-'  1  0  ~/vim-markdown-changes/build/manifest
+-'  1  0  ~/vim-markdown-changes/build/snippets/markdown.snippets
+-'  1  0  ~/vim-markdown-changes/build/ftplugin/markdown.vim
+-'  1  0  ~/vim-markdown-changes/build/ftdetect/markdown.vim
+-'  1  0  ~/vim-markdown-changes/build/compiler/markdown.vim
+-'  72  0  ~/vim-markdown-changes/build/syntax/markdown.vim
+-'  1  0  ~/vim-markdown-changes/build/syntax/markdown.vim
+-'  1  0  ~/vim-markdown-changes/build.vim
+-'  39  0  ~/vim-markdown-changes/build.vim
+-'  76  0  /tmp/tutor8LjPgr
+-'  1  0  /tmp/tutor8LjPgr
 -'  21  0  ~/.vimrc
 -'  1  0  ~/.vimrc
 -'  1  0  ~/profile/.git/MERGE_MSG
@@ -175,32 +235,62 @@ $
 -'  1  0  ~/.config/openbox/menu.xml
 -'  394  34  ~/.emacs
 -'  385  26  ~/.emacs
--'  677  0  ~/.emacs
--'  10  0  ~/.emacs
--'  380  0  ~/.emacs
--'  388  2  ~/.emacs
--'  1  0  ~/.emacs
--'  1  0  ~/1.lst
--'  440  2  /srv/http/wiki/includes/Import.php
--'  1  0  /srv/http/wiki/includes/Import.php
--'  1  57  /srv/http/test.php
--'  38  0  ~/.i3/config
--'  1  0  ~/.i3/config
--'  35  0  ~/.i3/config
--'  36  123  ~/.i3/config
--'  130  9  ~/.i3/config
--'  32  1  ~/.i3/config
--'  421  60  ~/.emacs
--'  34  0  ~/.emacs
--'  48  0  ~/NERD_tree_1
--'  102  2  ~/NERD_tree_1
--'  1  0  ~/NERD_tree_1
--'  1  0  ~/Dropbox/note/note.org
 
 # 缓冲区列表:
-%~/.vimrc	21	0
+%~/vim-markdown-master/README.mkd	1	0
 
 # 文件内的标记历史记录 (从新到旧):
+
+> ~/vim-markdown-master/README.mkd
+	"	1	0
+
+> ~/markdown-1.2.2.vba.gz
+	"	1	0
+	.	165	0
+	+	165	0
+
+> ~/markdown-1.2.2.vba
+	"	1	0
+
+> ~/.vim/.VimballRecord
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/vim-markdown-changes/build/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/vim-markdown-changes/build/NERD_tree_2
+	"	13	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~/vim-markdown-changes/build.vim
+	"	16	0
+
+> ~/vim-markdown-changes/build/manifest
+	"	1	0
+
+> ~/vim-markdown-changes/build/snippets/markdown.snippets
+	"	1	0
+
+> ~/vim-markdown-changes/build/ftplugin/markdown.vim
+	"	1	0
+
+> ~/vim-markdown-changes/build/ftdetect/markdown.vim
+	"	1	0
+
+> ~/vim-markdown-changes/build/compiler/markdown.vim
+	"	1	0
+
+> ~/vim-markdown-changes/build/syntax/markdown.vim
+	"	72	0
+
+> /tmp/tutor8LjPgr
+	"	76	0
 
 > ~/.vimrc
 	"	21	0
