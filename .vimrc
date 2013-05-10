@@ -195,6 +195,22 @@ inoremap <C-S-Insert> <esc>pa
 let g:linemovement_up="<c-Up>"
 let g:linemovement_down="<c-Down>"
 
+" ConqueTerm bash	模拟bash
+" ConqueTerm python	模拟python shell
+
+" taglist
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+"let Tlist_Ctags_Cmd = 'ctags'	 " windows 下 ctags路径指定
+let Tlist_Show_One_File = 1      " 不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1    " 如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1   " 在右侧窗口中显示taglist窗口
+
+" Calendar
+let g:calendar_diary = "~/Dropbox/diary" " 设置日记的存储路径
+let g:calendar_monday = 1 "以星期一为开始
+let g:calendar_focus_today = 1 " 光标在当天的日期上
+let g:calendar_mark = 'left-fit' "可以让*和数字可靠近
+
 " }}}
 
 " {{{ NERD_tree
@@ -234,15 +250,6 @@ function Lilydjwg_NERDTreeOpen()
 endfunction
 "}}}
 
-" {{{ bufferExplorer
-"let g:bufExplorerSortBy='mru'
-"let g:bufExplorerSplitRight=0     
-"let g:bufExplorerSplitVertical=1    .
-"let g:bufExplorerSplitVertSize = 30 
-"let g:bufExplorerUseCurrentWindow=1 
-"autocmd BufWinEnter \[Buf\ List\] setl nonumber
-" }}}
-
 "{{{ powerline
 "let g:Powerline_symbols = 'fancy'
 "set fillchars+=stl:\ ,stlnc:\
@@ -252,11 +259,11 @@ endfunction
 "{{{ vimwiki
 
 let g:vimwiki_w32_dir_enc = 'utf-8'
-let g:vimwiki_list = [{'path': '~/Yunio/vimwiki/'}]
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_camel_case = 0
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_folding = 0
-let g:vimwiki_browsers = ['chromium']
+let g:vimwiki_browsers = ['firefox']
 let g:vimwiki_use_calendar = 1
 let g:vimwiki_CJK_length = 1
 let g:vimwiki_dir_link = 'index'

@@ -8,18 +8,43 @@
 # hlsearch on (H) or off (h):
 ~h
 # 上个 Search 图案：
-~MSle0~/:k
+~MSle0~/diary" " 设置日记的存储路径
 
 # 最后替换的字符串
 $
 
 # 命令行 历史记录 (从新到旧)：
 :q
+:help holy-grail
+:help 42
+:help!
+:q!
+:NERDTree
+:help modeline
+:w
+:Tlist
+:/diary" " 设置日记的存储路径
+:TlistOpen
+:e .vimrc
+:buffer
+:help taglist.txt
+:helptags ~/.vim/doc/
+:help ~/.vim/doc
+:tag
+:VimwikiTabIndex
+:so %
+:Calendar
+:ConqueTerm Pow
+:b 1
+:ConqueTerm python
+:ConqueTerm bash
+:ConqueTermSplit ls
+:ConqueTermSplit
+:ConqueTerm
+:h viminfo-file-marks@cn
+:h markdown
 :markdown
 :source %
-:q!
-:w
-:NERDTree
 :h quickref
 :help k
 :k a
@@ -29,16 +54,16 @@ $
 :view
 :help
 :Hlep
-:e .vimrc
-:help 42
-:help!
 :wq
 :.!=============================================================================
 :.! RXVT-unicode setting
 :b 2
 
 # 查找字符串 历史记录 (从新到旧)：
+? diary" " 设置日记的存储路径
+?/<<
 ? ^\s*$
+?/*
 ?/:k
 ?/k
 ?/fc
@@ -51,91 +76,122 @@ $
 # 表达式 历史记录 (从新到旧)：
 
 # 输入行 历史记录 (从新到旧)：
+@n
 
 # 输入行 历史记录 (从新到旧)：
 
 # 寄存器:
 "0	CHAR	0
-	" h
-""1	LINE	0
-	
-"2	LINE	0
-	
-"3	LINE	0
-	# [link][]
-	snippet []
-		[${1:link_id}][]${2}
-	# [link][id]
-	snippet [[
-		[${1:link}][${2:id}]${3}
-	# [link](url)
-	snippet [(
-		[${1:link}](http://${2:url})${3}
-	# [link](email)
-	snippet [@
-		[${1:link}(mailto:${2:email})${3}
-	# [link](url "title")
-	snippet [("
-		[${1:link}](${2:url} "${3:title}")${4}
-	# [id]: url "title"
-	snippet [:
-		[${1:id}]: http://${2:url} "${3:title}"
-	# [id]: email "title"
-	snippet [:@
-		[${1:id}]: mailto:${2:url} "${3:title}"
-	# ![alt][id]
-	snippet ![
-		![${1:alt}][${2:id}]${3}
-	# ![alt](url)
-	snippet !(
-		![${1:alt}](${2:url})${3}
-	# ![alt](url "title")
-	snippet !("
-		![${1:alt}](${2:url} "${3:title}")${4}
-	# *emphasis* or _emphasis_
-	snippet *
-		*${1}*${2}
-	snippet _
-		_${1}_${2}
-	# **strong** or __strong__
-	snippet **
-		**${1}**${2}
-	snippet __
-		__${1}__${2}
-	# `code`
-	snippet `
-		\`${1}\`${2}
-"4	LINE	0
+	 
+	 
+	 
+	 
+"1	BLOCK	11
+	            
+	            
+	            
+"2	BLOCK	12
+	             
+	             
+	             
+	             
+	             
+	             
+	             
+"3	BLOCK	9
+	          
+	          
+"4	CHAR	0
+	，用鼠标双击此tag功能也一样
 	
 "5	LINE	0
-	" Markdown
-	autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
-"6	LINE	0
-	
+	<<<<<<< HEAD
+"6	BLOCK	0
+	 
+	 
+	 
+	 
 "7	LINE	0
-	
+	endif
 "8	LINE	0
-	
+	if MySys() == "linux"              "设定linux系统中ctags程序的位置
 "9	LINE	0
-	
+	if MySys() == "windows"           "设定windows系统中ctags程序的位置
+	  let Tlist_Ctags_Cmd = 'ctags'
+	elseif MySys() == "linux"         "设定windows系统中ctags程序的位置
+	  let Tlist_Ctags_Cmd = '/usr/bin/'
+	endif
 "a@	CHAR	0
-	i"j
-"-	CHAR	0
-	" h
+	i		hj
+""-	BLOCK	1
+	E:
 
 # 文件标记:
-'0  1  0  ~/vim-markdown-master/README.mkd
-'1  1  0  ~/markdown-1.2.2.vba.gz
-'2  1  0  ~/markdown-1.2.2.vba
-'3  16  0  ~/vim-markdown-changes/build.vim
-'4  1  0  ~/vim-markdown-changes/build/manifest
-'5  1  0  ~/vim-markdown-changes/build/snippets/markdown.snippets
-'6  1  0  ~/vim-markdown-changes/build/ftplugin/markdown.vim
-'7  1  0  ~/vim-markdown-changes/build/ftdetect/markdown.vim
-'8  1  0  ~/vim-markdown-changes/build/compiler/markdown.vim
-'9  72  0  ~/vim-markdown-changes/build/syntax/markdown.vim
+'0  1  0  ~/doc/rules.mk
+'1  1  0  ~/doc/README.md
+'2  29756  4  ~/Downloads/武侠/多情剑客无情剑.txt
+'3  465  6  ~/Dropbox/software_use/vim_use
+'4  466  0  ~/Dropbox/software_use/vim_use
+'5  208  9  ~/.vimrc
+'6  38  5  ~/.vimrc
+'7  1  0  ~/.emacs.bmk
+'8  1  7  ~/Dropbox/software_use/vim_use
+'9  1  0  ~/.vim/doc/NERD_tree_2
 
 # 跳转列表 (从新到旧):
+-'  1  0  ~/doc/rules.mk
+-'  1  0  ~/doc/README.md
+-'  29756  4  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  53  0  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  41  0  ~/NERD_tree_1
+-'  91  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  1  0  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  465  6  ~/Dropbox/software_use/vim_use
+-'  1  0  ~/Dropbox/software_use/vim_use
+-'  466  0  ~/Dropbox/software_use/vim_use
+-'  2  0  ~/__Tag_List__
+-'  208  9  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  38  5  ~/.vimrc
+-'  216  4  ~/.vimrc
+-'  1  0  ~/.emacs.bmk
+-'  1  0  ~/.vim/doc/NERD_tree_2
+-'  146  2  ~/.vim/doc/NERD_tree_2
+-'  146  2  ~/.vim/doc/NERD_tree_1
+-'  1  0  ~/.vim/doc/NERD_tree_1
+-'  203  0  ~/.vimrc
+-'  202  4  ~/.vimrc
+-'  204  0  ~/.vimrc
+-'  260  0  ~/.vimrc
+-'  206  82  ~/.vimrc
+-'  4  0  ~/__Tag_List__
+-'  6  0  ~/__Tag_List__
+-'  5  0  ~/__Tag_List__
+-'  283  29  ~/.vimrc
+-'  1  0  ~/vimwiki-2-1.vba
+-'  1  0  ~/.vim/doc/releases/v1.2.2.mkd
+-'  37  0  ~/.vim/doc/calendar.txt
+-'  1  0  ~/.vim/doc/calendar.txt
+-'  78  0  ~/.vim/doc/conque_term.txt
+-'  1  0  ~/.vim/doc/conque_term.txt
+-'  217  0  ~/.vimrc
+-'  10  3  ~/python - 1
+-'  9  0  ~/python - 1
+-'  8  7  ~/python - 1
+-'  7  0  ~/python - 1
+-'  5  0  ~/python - 1
+-'  3  0  ~/python - 1
+-'  2  0  ~/python - 1
+-'  1  0  ~/python - 1
+-'  198  0  ~/.vimrc
+-'  26  1  ~/bash - 1
+-'  25  0  ~/bash - 1
+-'  24  0  ~/bash - 1
+-'  23  4  ~/bash - 1
+-'  6  0  ~/bash - 1
+-'  2  0  ~/bash - 1
+-'  1  0  ~/vim-markdown-master/doc/releases/v1.0.0.mkd
 -'  1  0  ~/vim-markdown-master/README.mkd
 -'  66  0  ~/vim-markdown-master/README.mkd
 -'  1  0  ~/markdown-1.2.2.vba.gz
@@ -158,88 +214,248 @@ $
 -'  76  0  /tmp/tutor8LjPgr
 -'  1  0  /tmp/tutor8LjPgr
 -'  21  0  ~/.vimrc
--'  1  0  ~/.vimrc
 -'  1  0  ~/profile/.git/MERGE_MSG
--'  48  0  ~/NERD_tree_1
--'  102  2  ~/NERD_tree_1
--'  1  0  ~/NERD_tree_1
+-'  136  0  ~/NERD_tree_1
+-'  190  2  ~/NERD_tree_1
 -'  1  0  ~/Dropbox/note/note.org
 -'  1  0  ~/.ssh/id_rsa.pub
 -'  1  0  ~/profile/.git/COMMIT_EDITMSG
 -'  56  0  ~/linemovement.vim
 -'  1  0  ~/linemovement.vim
 -'  194  31  ~/.vimrc
--'  141  0  ~/NERD_tree_1
--'  185  2  ~/NERD_tree_1
--'  1  0  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  229  0  ~/NERD_tree_1
+-'  273  2  ~/NERD_tree_1
 -'  1  0  ~/Downloads/book/周恩来传记.txt
 -'  3074  0  ~/Downloads/book/周恩来传记.txt
--'  34  0  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  51  0  ~/Downloads/武侠/多情剑客无情剑.txt
 -'  38  0  ~/Desktop/NERD_tree_1
 -'  86  2  ~/Desktop/NERD_tree_1
 -'  1  0  ~/Desktop/NERD_tree_1
 -'  34  0  ~/.vimrc
 -'  23  0  ~/三体全集/三体全集.txt
--'  42  1161  ~/三体全集/三体全集.txt
--'  7  0  ~/三体全集/NERD_tree_2
--'  10  2  ~/三体全集/NERD_tree_2
--'  1  0  ~/三体全集/NERD_tree_2
--'  10  2  ~/三体全集/NERD_tree_1
--'  1  0  ~/三体全集/NERD_tree_1
--'  23  90  ~/.bashrc
--'  17  50  ~/.bashrc
--'  13  0  ~/.bashrc
--'  1  0  ~/.bashrc
--'  10  0  ~/.xinitrc
--'  1  0  ~/.xinitrc
--'  30  0  ~/.Xresouces
--'  1  0  ~/.Xresouces
--'  28  0  ~/.Xresouces
--'  22  20  ~/.Xresouces
--'  29  0  ~/.Xresouces
--'  56  0  ~/.fvwm/scripts/TimeAndDate
--'  9  1  ~/.fvwm/scripts/TimeAndDate
--'  1  0  ~/.fvwm/scripts/TimeAndDate
--'  157  0  ~/Dropbox/Profile/fvwm2rc
--'  1  0  ~/Dropbox/Profile/fvwm2rc
--'  59  13  ~/.fvwm/fvwm2rc.menus
--'  26  22  ~/.fvwm/fvwm2rc.menus
--'  15  0  ~/.fvwm/NERD_tree_1
--'  1  0  ~/.fvwm/fvwm2rc.irc
--'  14  0  ~/.fvwm/NERD_tree_1
--'  28  1  ~/.fvwm/fvwm2rc.dock
--'  13  0  ~/.fvwm/NERD_tree_2
--'  22  2  ~/.fvwm/NERD_tree_2
--'  1  0  ~/.fvwm/NERD_tree_2
--'  22  2  ~/.fvwm/NERD_tree_1
--'  1  0  ~/.fvwm/NERD_tree_1
--'  25  0  ~/.fvwm/.fvwm2rc
--'  31  0  ~/.fvwm/NERD_tree_2
--'  48  2  ~/.fvwm/NERD_tree_2
--'  48  2  ~/.fvwm/NERD_tree_1
--'  265  0  ~/.bash_history
--'  46  0  ~/.bash_history
--'  1  0  ~/.bash_history
--'  23  0  ~/.cache/.fr-yGB3Pa/config
--'  1  0  ~/.cache/.fr-yGB3Pa/config
--'  152  19  ~/.fvwm/.fvwm2rc
--'  122  0  ~/.fvwm/.fvwm2rc
--'  153  8  ~/.fvwm/.fvwm2rc
--'  198  0  ~/.fvwm/.fvwm2rc
--'  202  26  ~/.fvwm/.fvwm2rc
--'  199  26  ~/.fvwm/.fvwm2rc
--'  196  134  ~/.fvwm/.fvwm2rc
--'  1  0  ~/.fvwm/.fvwm2rc
--'  5  0  ~/.config/openbox/menu.xml
--'  6  0  ~/.config/openbox/menu.xml
--'  1  0  ~/.config/openbox/menu.xml
--'  394  34  ~/.emacs
--'  385  26  ~/.emacs
+-'  41  0  ~/NERD_tree_1
+-'  91  2  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  29756  4  ~/Downloads/武侠/多情剑客无情剑.txt
+-'  53  0  ~/Downloads/武侠/多情剑客无情剑.txt
 
 # 缓冲区列表:
-%~/vim-markdown-master/README.mkd	1	0
+%~/doc/rules.mk	1	0
 
 # 文件内的标记历史记录 (从新到旧):
+
+> ~/doc/rules.mk
+	"	1	0
+
+> ~/doc/README.md
+	"	1	0
+
+> ~/.vim/doc/usr_42.cnx
+	"	311	59
+
+> ~/.vim/doc/index.cnx
+	"	947	46
+
+> ~/Downloads/武侠/多情剑客无情剑.txt
+	"	29756	4
+	.	1	0
+	+	41862	4
+	+	1	0
+	a	51	4
+
+> ~/.vim/doc/options.cnx
+	"	396	21
+
+> ~/NERD_tree_1
+	"	41	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Dropbox/software_use/vim_use
+	"	465	6
+	^	465	9
+	.	465	6
+	+	531	0
+	+	502	26
+	+	491	0
+	+	489	4
+	+	490	1
+	+	491	7
+	+	492	1
+	+	499	2
+	+	501	1
+	+	502	4
+	+	489	5
+	+	490	2
+	+	491	8
+	+	492	2
+	+	498	2
+	+	499	3
+	+	500	3
+	+	501	2
+	+	502	5
+	+	488	37
+	+	464	12
+	+	462	21
+	+	463	12
+	+	462	3
+	+	465	6
+
+> ~/__Tag_List__
+	"	2	0
+	.	1	0
+	+	7	0
+	+	3	0
+	+	2	0
+	+	1	0
+
+> ~/.vimrc
+	"	208	9
+	^	208	10
+	.	208	9
+	+	64	0
+	+	70	0
+	+	71	0
+	+	192	5
+	+	226	4
+	+	192	18
+	+	217	0
+	+	193	0
+	+	194	18
+	+	194	18
+	+	195	30
+	+	196	33
+	+	194	31
+	+	21	0
+	+	217	0
+	+	198	0
+	+	199	18
+	+	198	27
+	+	199	37
+	+	217	0
+	+	278	34
+	+	274	40
+	+	264	0
+	+	218	0
+	+	226	0
+	+	218	2
+	+	264	0
+	+	219	0
+	+	224	0
+	+	225	0
+	+	216	86
+	+	216	0
+	+	216	0
+	+	216	0
+	+	204	16
+	+	204	81
+	+	206	82
+	+	204	34
+	+	201	8
+	+	204	0
+	+	204	4
+	+	202	0
+	+	204	0
+	+	203	33
+	+	204	35
+	+	203	31
+	+	205	34
+	+	206	34
+	+	203	0
+	+	214	0
+	+	36	0
+	+	38	0
+	+	209	63
+	+	212	59
+	+	209	32
+	+	208	9
+	o	36	0
+
+> ~/.emacs.bmk
+	"	1	0
+
+> ~/.vim/doc/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/doc/NERD_tree_2
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/doc/__Tag_List__
+	"	2	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/doc/taglist.txt
+	"	1	0
+
+> ~/.vim/doc/.vimrc
+	"	1	0
+
+> ~/vimwiki-2-1.vba
+	"	1	0
+
+> ~/.vim/.VimballRecord
+	"	2	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/doc/releases/v1.2.2.mkd
+	"	1	0
+
+> ~/__Calendar
+	"	14	14
+	^	27	0
+	.	3	0
+	+	3	0
+
+> ~/.vim/doc/calendar.txt
+	"	37	0
+
+> ~/.vim/doc/conque_term.txt
+	"	78	0
+
+> ~/python - 1
+	"	10	3
+	^	10	4
+	.	10	0
+	+	1	0
+	+	4	0
+	+	5	0
+	+	8	0
+	+	10	0
+
+> ~/bash - 1
+	"	26	1
+	^	26	2
+	.	26	0
+	+	1	0
+	+	2	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	23	0
+	+	26	0
+
+> ~/ls - 1
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/vim-markdown-master/doc/releases/v1.0.0.mkd
+	"	1	0
 
 > ~/vim-markdown-master/README.mkd
 	"	1	0
@@ -251,11 +467,6 @@ $
 
 > ~/markdown-1.2.2.vba
 	"	1	0
-
-> ~/.vim/.VimballRecord
-	"	1	0
-	.	1	0
-	+	1	0
 
 > ~/vim-markdown-changes/build/NERD_tree_1
 	"	1	0
@@ -292,25 +503,6 @@ $
 > /tmp/tutor8LjPgr
 	"	76	0
 
-> ~/.vimrc
-	"	21	0
-	^	21	1
-	.	21	0
-	+	64	0
-	+	70	0
-	+	71	0
-	+	192	5
-	+	198	4
-	+	192	18
-	+	197	0
-	+	193	0
-	+	194	18
-	+	194	18
-	+	195	30
-	+	196	33
-	+	194	31
-	+	21	0
-
 > ~/profile/.git/MERGE_MSG
 	"	1	0
 
@@ -335,16 +527,6 @@ $
 	+	20	0
 	+	21	0
 
-> ~/NERD_tree_1
-	"	48	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
 > ~/.ssh/id_rsa.pub
 	"	1	0
 
@@ -353,10 +535,6 @@ $
 
 > ~/linemovement.vim
 	"	56	0
-
-> ~/Downloads/武侠/多情剑客无情剑.txt
-	"	29756	4
-	a	34	4
 
 > ~/Downloads/gor-2.5.zip
 	"	8	0
@@ -431,9 +609,6 @@ $
 	+	10	0
 	+	4	0
 	+	10	0
-
-> ~/.vim/doc/usr_42.cnx
-	"	311	59
 
 > ~/.Xresouces
 	"	30	0
