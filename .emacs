@@ -322,21 +322,21 @@ auto-mode-alist))
 
 ;;emacs muse
 ;(load "~/.emacs.d/muse/muse.el")
-(require 'muse-mode)
-(require 'muse-wiki)
-(require 'muse-html)         ;添加html格式的支持
-(require 'muse-latex)        ; 添加latex格式的支持
-(require 'muse-texinfo)      ; 添加texinfo格式的支持
-(require 'muse-docbook)      ; 添加docbook格式的支持
-(require 'muse-project)      ; 添加wiki project的支持
+;(require 'muse-mode)
+;(require 'muse-wiki)
+;(require 'muse-html)         ;添加html格式的支持
+;(require 'muse-latex)        ; 添加latex格式的支持
+;(require 'muse-texinfo)      ; 添加texinfo格式的支持
+;(require 'muse-docbook)      ; 添加docbook格式的支持
+;(require 'muse-project)      ; 添加wiki project的支持
 ;;muse
 ;;设置编码方式为utf-8
-(setq muse-html-meta-content-type (concat "text/html; charset=utf-8"))
+;(setq muse-html-meta-content-type (concat "text/html; charset=utf-8"))
 ;;新建一个wiki工程
-(setq muse-project-alist
-      '(("Think"
-         ("~/Dropbox/note/wiki" :default "index")
-         (:base "html" :path "~/Dropbox/note/wiki/html"))))
+;(setq muse-project-alist
+;      '(("Think"
+;         ("~/Dropbox/note/wiki" :default "index")
+;         (:base "html" :path "~/Dropbox/note/wiki/html"))))
 
 ;; linum
 (load "~/.emacs.d/linum+.el")
@@ -382,10 +382,10 @@ auto-mode-alist))
 (require 'sr-speedbar)
 
 ;; tomorrow theme
-(load "~/.emacs.d/tomorrow/color-theme-tomorrow.el")
-(load "~/.emacs.d/tomorrow/tomorrow-day-theme.el")
-(require 'tomorrow-day-theme)
-(load-theme `tomorrow-day t)
+;(load "~/.emacs.d/tomorrow/color-theme-tomorrow.el")
+;(load "~/.emacs.d/tomorrow/tomorrow-day-theme.el")
+;(require 'tomorrow-day-theme)
+;(load-theme `tomorrow-day t)
 
 ;; tron-theme.el
 ;(load "~/.emacs.d/tron-theme.el")
@@ -442,8 +442,8 @@ auto-mode-alist))
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
 ;; 新版 Emacs 自带包管理工具
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;(require 'package)
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; 自动保存上次光标所在的位置
 ;(load "~/.emacs.d/saveplace.el")
@@ -574,18 +574,18 @@ auto-mode-alist))
 
 ;; w3m
 ;(add-to-list 'load-path' "~/.emacs.d/emacs-w3m/")
-(setq w3m-coding-system 'utf-8
-          w3m-file-coding-system 'utf-8
-          w3m-file-name-coding-system 'utf-8
-          w3m-input-coding-system 'utf-8
-          w3m-output-coding-system 'utf-8
-          w3m-terminal-coding-system 'utf-8)
-(setq w3m-display-inline-image t)
-(setq w3m-tab-width 8)
-(setq w3m-home-page "http://127.0.0.1/wiki")
+;(setq w3m-coding-system 'utf-8
+;          w3m-file-coding-system 'utf-8
+;          w3m-file-name-coding-system 'utf-8
+;          w3m-input-coding-system 'utf-8
+;          w3m-output-coding-system 'utf-8
+;          w3m-terminal-coding-system 'utf-8)
+;(setq w3m-display-inline-image t)
+;(setq w3m-tab-width 8)
+;(setq w3m-home-page "http://127.0.0.1/wiki")
 ;;使用工具包
-(setq w3m-use-toolbar t)
-(setq browse-url-generic-program "w3m")
+;(setq w3m-use-toolbar t)
+;(setq browse-url-generic-program "w3m")
 
 ;; calendar
 (require 'calendar)

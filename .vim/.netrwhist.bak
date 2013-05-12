@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/mnt/dirver_d/sky/Game/note'
-let g:netrw_dirhist_2='/mnt/dirver_d'
-let g:netrw_dirhist_3='/mnt/dirver_d/sky/Game/note'
-let g:netrw_dirhist_4='/mnt/dirver_d'
-let g:netrw_dirhist_5='/home/mudan/.fvwm'
