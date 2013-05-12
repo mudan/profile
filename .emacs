@@ -177,6 +177,46 @@ auto-mode-alist))
 		  ;; 以追加方式更新，用于大文件 (setq auto-revert-tail-mode t)
 ;                  (message "Enabling auto-revert-mode for log file")))))
 
+;; eshell
+;; 将alias保存到指定目录,以兹备份
+;; 新建一文件alias,内容如：
+;; alias 'ls 'ls -a
+;; alias 'halt 'shutdown /p
+(setq eshell-aliases-file "~/.emacs.d/alias")
+;; 输入em file即可用Emacs在当前窗口进行文件编辑
+(defalias 'em 'find-file)
+;; 打开shell
+(global-set-key (kbd "C-c z") 'eshell)
+;; 设置
+(setq   eshell-save-history-on-exit t
+	eshell-history-size 512
+	eshell-hist-ignoredups t
+	eshell-cmpl-ignore-case t
+	eshell-cp-interactive-query t
+	eshell-ln-interactive-query t
+	eshell-mv-interactive-query t
+	eshell-rm-interactive-query t
+	eshell-mv-overwrite-files nil
+	eshell-highlight-prompt t
+	eshell-prompt-function    (lambda nil
+				    (concat
+				     (abbreviate-file-name
+				      (eshell/pwd))
+				     (if
+					 (=
+					  (user-uid)
+					  0)
+					 " # " " >>> "))))
+;; 计算每个命令花费时间
+(add-hook 'eshell-load-hook
+          (lambda()(setq last-command-start-time (time-to-seconds))))
+(add-hook 'eshell-pre-command-hook
+          (lambda()(setq last-command-start-time (time-to-seconds))))
+(add-hook 'eshell-before-prompt-hook
+          (lambda()
+              (message "spend %g seconds"
+                       (- (time-to-seconds) last-command-start-time))))
+
 ;;设置内置输入法
  (setq my-input-methods
        '("japanese"
@@ -382,10 +422,10 @@ auto-mode-alist))
 (require 'sr-speedbar)
 
 ;; tomorrow theme
-;(load "~/.emacs.d/tomorrow/color-theme-tomorrow.el")
-;(load "~/.emacs.d/tomorrow/tomorrow-day-theme.el")
-;(require 'tomorrow-day-theme)
-;(load-theme `tomorrow-day t)
+(load "~/.emacs.d/tomorrow/color-theme-tomorrow.el")
+(load "~/.emacs.d/tomorrow/tomorrow-day-theme.el")
+(require 'tomorrow-day-theme)
+(load-theme `tomorrow-day t)
 
 ;; tron-theme.el
 ;(load "~/.emacs.d/tron-theme.el")
@@ -481,17 +521,43 @@ auto-mode-alist))
 (require 'htmlize)
 
 ;; powerline.el
-(load "~/.emacs.d/powerline.el")
-(require 'powerline)
-(setq powerline-arrow-shape 'arrow)   ;; the default
-(custom-set-faces
-   '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil)))))
+;(load "~/.emacs.d/powerline.el")
+;(require 'powerline)
+;(setq powerline-arrow-shape 'arrow)   ;; the default
+;(custom-set-faces
+;   '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil)))))
 
 ;; 像 Window 中那样用 Ctrl-Tab 来切换窗口
 (load "~/.emacs.d/wcy-swbuff.el")
 (global-set-key (kbd "<f6>") 'wcy-switch-buffer)
 (setq wcy-switch-buffer-active-buffer-face  'highlight)
 (setq wcy-switch-buffer-inactive-buffer-face  'secondary-selection)
+
+;; color-theme
+(add-to-list 'load-path' "~/.emacs.d/color-theme/")
+(require 'color-theme)
+(defun color-theme-eshell ()
+  (interactive)
+  (color-theme-install
+   '(color-theme-eshell
+     nil
+     (eshell-ls-archive-face ((t (:bold t :foreground "indianred1"))))
+     (eshell-ls-backup-face ((t (:foreground "indianred3"))))
+     (eshell-ls-clutter-face ((t (:foreground "DimGray"))))
+     (eshell-ls-directory-face ((t (:bold t :foreground "seagreen3"))))
+     (eshell-ls-executable-face ((t (:foreground "Coral"))))
+     (eshell-ls-missing-face ((t (:foreground "black"))))
+     (eshell-ls-picture-face ((t (:foreground "Violet")))) ; non-standard face
+     (eshell-ls-product-face ((t (:foreground "LightSalmon"))))
+     (eshell-ls-readonly-face ((t (:foreground "Aquamarine"))))
+     (eshell-ls-special-face ((t (:foreground "Gold"))))
+     (eshell-ls-symlink-face ((t (:foreground "White"))))
+     (eshell-ls-text-face ((t (:foreground "medium aquamarine")))) ; non-standard face
+     (eshell-ls-todo-face ((t (:bold t :foreground "aquamarine")))) ; non-standard face
+     (eshell-ls-unreadable-face ((t (:foreground "DimGray"))))
+     (eshell-prompt-face ((t (:bold t :foreground "gold"))))
+)))
+(provide 'color-theme-eshell)
 
 ;; evernote
 ;(load "~/.emacs.d/evernote-mode.el")
@@ -653,8 +719,6 @@ auto-mode-alist))
     (set-register 8 tmp))) 
 
 (global-set-key (kbd "<f1>") 'deft)
-;;打开shell
-(global-set-key (kbd "C-c z") 'eshell)
 ;; calendar
 (global-set-key (kbd "C-c C-d") 'calendar)
 ;; align regexp 对齐选定文本
