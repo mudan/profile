@@ -1,0 +1,12 @@
+ImagePath $[FVWM_USERDIR]/images/
+
+#Terminal
+SetEnv TermName urxvt 
+# Theme
+SetEnv ThemeColor mytheme		
+
+
+# Calendar
+SetEnv DayNameColor #98c2c7			# Background color for day names
+SetEnv DayNumColor #828282
+SetEnv DayHiColor #98c2c7			# Background color for highlighted (current) day

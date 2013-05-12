@@ -1,0 +1,24 @@
+SetEnv fvwm_icon_size 100
+DestroyFunc Thumbnail
+AddToFunc Thumbnail
++ I Raise
++ I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead "$[FVWM_USERDIR]/scripts/thumb $[w.id] $[fvwm_icon_size] /dev/shm/icon.tmp.$[w.id].png $[w.miniiconfile]"
++ I Iconify
+
+DestroyFunc DeThumbnail
+AddToFunc DeThumbnail
++ I ThisWindow Layer 0 4
++ I PipeRead "echo WindowStyle Icon \\$\\[Icon-$[w.id]\\]"
++ I Exec exec rm -f /dev/shm/icon.tmp.$[w.id].png
+
+*FvwmEvent: deiconify DeThumbnail
+
+# This will remove gaps when de-iconifying an application
+AddToFunc DeiconifyAndRearrange
++ C Iconify off
++ C All (CurrentPage Iconic) PlaceAgain Icon
+AddToFunc IconFunc
+ + C DeiconifyAndRearrange
+ + M Raise
+ + M Move
+ + D DeiconifyAndRearrange

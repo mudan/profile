@@ -1,0 +1,28 @@
+DestroyModuleConfig FvwmAppLaunch: *
+        *FvwmAppLaunch: Rows 1
+        *FvwmAppLaunch: Frame 0
+        *FvwmAppLaunch: Columns 6
+        *FvwmAppLaunch: Colorset 7
+        *FvwmAppLaunch: BoxSize fixed
+	*FvwmAppLaunch: (1x1, Icon icons/fm.png, Action (Mouse 1) Exec exec thunar)
+	#*FvwmAppLaunch: (1x1, Icon icons/gimp.png, Action (Mouse 1) Exec exec gimp)
+	#*FvwmAppLaunch: (1x1, Icon icons/gaim.png, Action (Mouse 1) Exec exec gaim)
+        #*FvwmAppLaunch: (1x1, Icon icons/thunderbird.png, Action (Mouse 1) Exec exec mozilla-thunderbird)
+	*FvwmAppLaunch: (1x1, Icon icons/firefox.png, Action (Mouse 1) Exec exec firefox)
+	#*FvwmAppLaunch: (1x1, Icon icons/xchat16.png, Action (Mouse 1) Exec exec xchat)
+	*FvwmAppLaunch: (1x1, Icon icons/terminal.png, Action (Mouse 1) Exec exec urxvt -bg white -fg black +sb -fn "xft:Bitstream Vera Sans Mono:pixelsize=12")
+
+    Style FvwmAppLaunch Sticky, NoTitle, WindowListSkip, StaysOnBottom, \
+			BorderWidth 1, FixedSize, !Handles, WindowListSkip, \
+			CirculateSkipIcon, CirculateSkip, HandleWidth 0, \
+			NeverFocus
+
+DestroyModuleConfig FvwmClock: *
+        *FvwmClock: Rows 1
+        *FvwmClock: Frame 0
+        *FvwmClock: Columns 1
+        *FvwmClock: Colorset 78
+        *FvwmClock: BoxSize fixed
+        *FvwmClock: (Swallow "TimeAndDate" "FvwmScript scripts/TimeAndDate")
+
+    Style FvwmClock Sticky, NoTitle, WindowListSkip, StaysOnBottom, BorderWidth 1, FixedSize, NoHandles, NeverFocus
