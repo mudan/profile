@@ -18,7 +18,8 @@ xrdb .Xresouces &
 
 #stalonetray -p &
 
-exec i3
+#exec i3
 #exec fvwm
 #exec musca
+exec openbox-session
 #exec mate-session

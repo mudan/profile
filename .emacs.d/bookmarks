@@ -2,38 +2,24 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
- (filename . "~/.aMule/Incoming/")
- (front-context-string . "生活大爆炸.The.Big.Ba")
- (rear-context-string . "85 4月  29 14:18 ")
- (position . 200))
-("TDDOWNLOAD"
- (filename . "~/.wine/drive_c/TDDOWNLOAD/")
- (front-context-string . "heyzo.com-0245-F")
- (rear-context-string . "96 2月  14 19:01 ")
- (position . 213))
-("book.list"
- (filename . "/mnt/driver_1/sky/book/")
- (front-context-string . "..\n  -rwxrwxrwx ")
- (rear-context-string . "92 1月   3 16:37 ")
- (position . 125))
-("diary"
- (filename . "~/Dropbox/枯禅竹/diary.org")
- (front-context-string . "\n* 简录一生\n** 2012年")
- (rear-context-string)
- (position . 1))
-("unix"
+(("UNIX.org"
  (filename . "~/Dropbox/note/UNIX.org")
  (front-context-string . "#+STYLE: <link r")
  (rear-context-string)
  (position . 1))
-("think"
+("think.org"
  (filename . "~/Dropbox/note/think.org")
- (front-context-string . "\n* 墨子学案.梁启超\n** 子")
+ (front-context-string . "\n* 史记.百衲本\n** 夏本纪")
  (rear-context-string)
  (position . 1))
-("note"
+("note.org"
  (filename . "~/Dropbox/note/note.org")
- (front-context-string . "\n* 杂文摘\n** 论偏爱与公平")
+ (front-context-string . "\n* 杂文摘\n** 为什么男人不")
  (rear-context-string)
  (position . 1))
+("Incoming"
+ (filename . "~/.aMule/Incoming/")
+ (front-context-string)
+ (rear-context-string . "96 5月  12 12:54 ")
+ (position . 132))
 )

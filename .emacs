@@ -573,6 +573,42 @@ auto-mode-alist))
 ;(global-set-key "\C-cep" 'evernote-post-region)
 ;(global-set-key "\C-ceb" 'evernote-browser)
 
+;; AucTex
+(add-to-list 'load-path' "~/.emacs.d/")
+(add-to-list 'load-path' "~/.emacs.d/auctex/")
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+;; 多文件进行组织和管理
+;; 通知所有的文件 master 文件总为 master.tex 文件
+(setq-default TeX-master "master")
+;; 加入 hook 自动换行，数学公式，reftex 和显示行号的功能
+(mapc (lambda (mode)
+      (add-hook 'LaTeX-mode-hook mode))
+      (list 'auto-fill-mode
+            'LaTeX-math-mode
+            'turn-on-reftex
+            'linum-mode))
+;; 默认使用 xelatex 直接生成 pdf 文件，而不用每次用 ‘C-c C-t C-p’ 进行切换
+;; 设置 ‘Tex-show-compilation’ 为 t，在另一个窗口显示编译信息，对于错误的排除很方便
+;; 编译时默认直接保存文件，绑定补全符号到 TAB 键
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-auto-untabify t     ; remove all tabs before saving
+                  TeX-engine 'xetex       ; use xelatex default
+                  TeX-show-compilation t) ; display compilation windows
+            (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+            (setq TeX-save-query nil)
+            (imenu-add-menubar-index)
+            (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
+;; AucTeX 预定义的 viewer
+;; 对于 windows 平台而言，需要确保命令在 PATH 路径下，如果没有在 PATH 路径下，使用路径全名进行调。
+(setq TeX-view-program-list
+      '(("zathura" "zathura %o")
+        ("Okular" "okular --unique %o")
+        ("Evince" "evince %o")
+        ("SumatraPDF" "SumatraPDF.exe %o")
+	("Firefox" "firefox %o")))
+
 ;; emms
 (add-to-list 'load-path "~/.emacs.d/emms/")
 (require 'emms-setup)

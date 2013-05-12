@@ -1,0 +1,560 @@
+English (US):us:
+English (US):us:Cherokee:chr:
+English (US):us:English (US, with euro on 5):euro:
+English (US):us:English (US, international with dead keys):intl:
+English (US):us:English (US, alternative international):alt-intl:
+English (US):us:English (Colemak):colemak:
+English (US):us:English (Dvorak):dvorak:
+English (US):us:English (Dvorak, international with dead keys):dvorak-intl:
+English (US):us:English (Dvorak alternative international no dead keys):dvorak-alt-intl:
+English (US):us:English (left handed Dvorak):dvorak-l:
+English (US):us:English (right handed Dvorak):dvorak-r:
+English (US):us:English (classic Dvorak):dvorak-classic:
+English (US):us:English (programmer Dvorak):dvp:
+English (US):us:Russian (US, phonetic):rus:
+English (US):us:English (Macintosh):mac:
+English (US):us:English (international AltGr dead keys):altgr-intl:
+English (US):us:English (layout toggle on multiply/divide key):olpc2:
+English (US):us:Serbo-Croatian (US):hbs:
+English (US):us:English (Workman):workman:
+English (US):us:English (Workman, international with dead keys):workman-intl:
+English (US):us:English (US, international AltGr Unicode combining):intl-unicode:
+English (US):us:English (US, international AltGr Unicode combining, alternative):alt-intl-unicode:
+English (US):us:Atsina:ats:
+English (US):us:Couer D'alene Salish:crd:
+English (US):us:Czech Slovak and German (US):cz_sk_de:
+English (US):us:English (US, Sun Type 6/7):sun_type6:
+Afghani:af:
+Afghani:af:Pashto:ps:
+Afghani:af:Uzbek (Afghanistan):uz:
+Afghani:af:Pashto (Afghanistan, OLPC):olpc-ps:
+Afghani:af:Persian (Afghanistan, Dari OLPC):fa-olpc:
+Afghani:af:Uzbek (Afghanistan, OLPC):uz-olpc:
+Arabic:ara:
+Arabic:ara:Arabic (azerty):azerty:
+Arabic:ara:Arabic (azerty/digits):azerty_digits:
+Arabic:ara:Arabic (digits):digits:
+Arabic:ara:Arabic (qwerty):qwerty:
+Arabic:ara:Arabic (qwerty/digits):qwerty_digits:
+Arabic:ara:Arabic (Buckwalter):buckwalter:
+Arabic:ara:Arabic (Sun Type 6/7):sun_type6:
+Albanian:al:
+Armenian:am:
+Armenian:am:Armenian (phonetic):phonetic:
+Armenian:am:Armenian (alternative phonetic):phonetic-alt:
+Armenian:am:Armenian (eastern):eastern:
+Armenian:am:Armenian (western):western:
+Armenian:am:Armenian (alternative eastern):eastern-alt:
+Armenian:am:Armenian (OLPC phonetic):olpc-phonetic:
+German (Austria):at:
+German (Austria):at:German (legacy):legacy:
+German (Austria):at:German (Austria, eliminate dead keys):nodeadkeys:
+German (Austria):at:German (Austria, Sun dead keys):sundeadkeys:
+German (Austria):at:German (Austria, Macintosh):mac:
+Azerbaijani:az:
+Azerbaijani:az:Azerbaijani (Cyrillic):cyrillic:
+Belarusian:by:
+Belarusian:by:Belarusian (legacy):legacy:
+Belarusian:by:Belarusian (Latin):latin:
+Belgian:be:
+Belgian:be:Belgian (alternative):oss:
+Belgian:be:Belgian (alternative, latin-9 only):oss_latin9:
+Belgian:be:Belgian (alternative, Sun dead keys):oss_sundeadkeys:
+Belgian:be:Belgian (ISO alternate):iso-alternate:
+Belgian:be:Belgian (eliminate dead keys):nodeadkeys:
+Belgian:be:Belgian (Sun dead keys):sundeadkeys:
+Belgian:be:Belgian (Wang model 724 azerty):wang:
+Belgian:be:Belgian (Sun Type 6/7):sun_type6:
+Bengali:bd:
+Bengali:bd:Bengali (Probhat):probhat:
+Indian:in:
+Indian:in:Bengali (India):ben:
+Indian:in:Bengali (India, Probhat):ben_probhat:
+Indian:in:Bengali (India, Baishakhi):ben_baishakhi:
+Indian:in:Bengali (India, Bornona):ben_bornona:
+Indian:in:Bengali (India, Uni Gitanjali):ben_gitanjali:
+Indian:in:Bengali (India, Baishakhi Inscript):ben_inscript:
+Indian:in:Gujarati:guj:
+Indian:in:Punjabi (Gurmukhi):guru:
+Indian:in:Punjabi (Gurmukhi Jhelum):jhelum:
+Indian:in:Kannada:kan:
+Indian:in:Malayalam:mal:
+Indian:in:Malayalam (Lalitha):mal_lalitha:
+Indian:in:Malayalam (enhanced Inscript with Rupee Sign):mal_enhanced:
+Indian:in:Oriya:ori:
+Indian:in:Tamil (Unicode):tam_unicode:
+Indian:in:Tamil (keyboard with numerals):tam_keyboard_with_numerals:
+Indian:in:Tamil (TAB typewriter):tam_TAB:
+Indian:in:Tamil (TSCII typewriter):tam_TSCII:
+Indian:in:Tamil:tam:
+Indian:in:Telugu:tel:
+Indian:in:Urdu (phonetic):urd-phonetic:
+Indian:in:Urdu (alternative phonetic):urd-phonetic3:
+Indian:in:Urdu (WinKeys):urd-winkeys:
+Indian:in:Hindi (Bolnagri):bolnagri:
+Indian:in:Hindi (Wx):hin-wx:
+Indian:in:English (India, with RupeeSign):eng:
+Bosnian:ba:
+Bosnian:ba:Bosnian (use guillemets for quotes):alternatequotes:
+Bosnian:ba:Bosnian (use Bosnian digraphs):unicode:
+Bosnian:ba:Bosnian (US keyboard with Bosnian digraphs):unicodeus:
+Bosnian:ba:Bosnian (US keyboard with Bosnian letters):us:
+Portuguese (Brazil):br:
+Portuguese (Brazil):br:Portuguese (Brazil, eliminate dead keys):nodeadkeys:
+Portuguese (Brazil):br:Portuguese (Brazil, Dvorak):dvorak:
+Portuguese (Brazil):br:Portuguese (Brazil, nativo):nativo:
+Portuguese (Brazil):br:Portuguese (Brazil, nativo for USA keyboards):nativo-us:
+Portuguese (Brazil):br:Portuguese (Brazil, nativo for Esperanto):nativo-epo:
+Portuguese (Brazil):br:Portuguese (Brazil, Sun Type 6/7):sun_type6:
+Bulgarian:bg:
+Bulgarian:bg:Bulgarian (traditional phonetic):phonetic:
+Bulgarian:bg:Bulgarian (new phonetic):bas_phonetic:
+Arabic (Morocco):ma:
+Arabic (Morocco):ma:French (Morocco):french:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh):tifinagh:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh alternative):tifinagh-alt:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh alternative phonetic):tifinagh-alt-phonetic:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh extended):tifinagh-extended:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh phonetic):tifinagh-phonetic:
+Arabic (Morocco):ma:Berber (Morocco, Tifinagh extended phonetic):tifinagh-extended-phonetic:
+English (Cameroon):cm:
+English (Cameroon):cm:French (Cameroon):french:
+English (Cameroon):cm:Cameroon Multilingual (qwerty):qwerty:
+English (Cameroon):cm:Cameroon Multilingual (azerty):azerty:
+English (Cameroon):cm:Cameroon Multilingual (Dvorak):dvorak:
+Burmese:mm:
+French (Canada):ca:
+French (Canada):ca:French (Canada, Dvorak):fr-dvorak:
+French (Canada):ca:French (Canada, legacy):fr-legacy:
+French (Canada):ca:Canadian Multilingual:multix:
+French (Canada):ca:Canadian Multilingual (first part):multi:
+French (Canada):ca:Canadian Multilingual (second part):multi-2gr:
+French (Canada):ca:Inuktitut:ike:
+French (Canada):ca:English (Canada):eng:
+French (Canada):ca:Kutenai:kut:
+French (Canada):ca:Secwepemctsin:shs:
+French (Canada):ca:Multilingual (Canada, Sun Type 6/7):sun_type6:
+French (Democratic Republic of the Congo):cd:
+Chinese:cn:
+Chinese:cn:Tibetan:tib:
+Chinese:cn:Tibetan (with ASCII numerals):tib_asciinum:
+Chinese:cn:Uyghur:uig:
+Croatian:hr:
+Croatian:hr:Croatian (use guillemets for quotes):alternatequotes:
+Croatian:hr:Croatian (use Croatian digraphs):unicode:
+Croatian:hr:Croatian (US keyboard with Croatian digraphs):unicodeus:
+Croatian:hr:Croatian (US keyboard with Croatian letters):us:
+Czech:cz:
+Czech:cz:key):bksl:
+Czech:cz:Czech (qwerty):qwerty:
+Czech:cz:Czech (qwerty, extended Backslash):qwerty_bksl:
+Czech:cz:Czech (UCW layout, accented letters only):ucw:
+Czech:cz:Czech (US Dvorak with CZ UCW support):dvorak-ucw:
+Czech:cz:Czech (Sun Type 6/7):sun_type6:
+Danish:dk:
+Danish:dk:Danish (eliminate dead keys):nodeadkeys:
+Danish:dk:Danish (Macintosh):mac:
+Danish:dk:Danish (Macintosh, eliminate dead keys):mac_nodeadkeys:
+Danish:dk:Danish (Dvorak):dvorak:
+Danish:dk:Danish (Sun Type 6/7):sun_type6:
+Dutch:nl:
+Dutch:nl:Dutch (Sun dead keys):sundeadkeys:
+Dutch:nl:Dutch (Macintosh):mac:
+Dutch:nl:Dutch (standard):std:
+Dutch:nl:Dutch (Sun Type 6/7):sun_type6:
+Dzongkha:bt:
+Estonian:ee:
+Estonian:ee:Estonian (eliminate dead keys):nodeadkeys:
+Estonian:ee:Estonian (Dvorak):dvorak:
+Estonian:ee:Estonian (US keyboard with Estonian letters):us:
+Estonian:ee:Estonian (Sun Type 6/7):sun_type6:
+Persian:ir:
+Persian:ir:Persian (with Persian Keypad):pes_keypad:
+Persian:ir:Kurdish (Iran, Latin Q):ku:
+Persian:ir:Kurdish (Iran, F):ku_f:
+Persian:ir:Kurdish (Iran, Latin Alt-Q):ku_alt:
+Persian:ir:Kurdish (Iran, Arabic-Latin):ku_ara:
+Persian:ir:Avestan:ave:
+Iraqi:iq:
+Iraqi:iq:Kurdish (Iraq, Latin Q):ku:
+Iraqi:iq:Kurdish (Iraq, F):ku_f:
+Iraqi:iq:Kurdish (Iraq, Latin Alt-Q):ku_alt:
+Iraqi:iq:Kurdish (Iraq, Arabic-Latin):ku_ara:
+Faroese:fo:
+Faroese:fo:Faroese (eliminate dead keys):nodeadkeys:
+Finnish:fi:
+Finnish:fi:Finnish (classic):classic:
+Finnish:fi:Finnish (classic, eliminate dead keys):nodeadkeys:
+Finnish:fi:Northern Saami (Finland):smi:
+Finnish:fi:Finnish (Macintosh):mac:
+Finnish:fi:Finnish (Sun Type 6/7):sun_type6:
+French:fr:
+French:fr:French (eliminate dead keys):nodeadkeys:
+French:fr:French (Sun dead keys):sundeadkeys:
+French:fr:French (alternative):oss:
+French:fr:French (alternative, latin-9 only):oss_latin9:
+French:fr:French (alternative, eliminate dead keys):oss_nodeadkeys:
+French:fr:French (alternative, Sun dead keys):oss_sundeadkeys:
+French:fr:French (legacy, alternative):latin9:
+French:fr:French (legacy, alternative, eliminate dead keys):latin9_nodeadkeys:
+French:fr:French (legacy, alternative, Sun dead keys):latin9_sundeadkeys:
+French:fr:French (Bepo, ergonomic, Dvorak way):bepo:
+French:fr:French (Bepo, ergonomic, Dvorak way, latin-9 only):bepo_latin9:
+French:fr:French (Dvorak):dvorak:
+French:fr:French (Macintosh):mac:
+French:fr:French (Breton):bre:
+French:fr:Occitan:oci:
+French:fr:Georgian (France, AZERTY Tskapo):geo:
+French:fr:French (Sun Type 6/7):sun_type6:
+English (Ghana):gh:
+English (Ghana):gh:English (Ghana, multilingual):generic:
+English (Ghana):gh:Akan:akan:
+English (Ghana):gh:Ewe:ewe:
+English (Ghana):gh:Fula:fula:
+English (Ghana):gh:Ga:ga:
+English (Ghana):gh:Hausa:hausa:
+English (Ghana):gh:Avatime:avn:
+English (Ghana):gh:English (Ghana, GILLBT):gillbt:
+French (Guinea):gn:
+Georgian:ge:
+Georgian:ge:Georgian (ergonomic):ergonomic:
+Georgian:ge:Georgian (MESS):mess:
+Georgian:ge:Russian (Georgia):ru:
+Georgian:ge:Ossetian (Georgia):os:
+German:de:
+German:de:German (dead acute):deadacute:
+German:de:German (dead grave acute):deadgraveacute:
+German:de:German (eliminate dead keys):nodeadkeys:
+German:de:Romanian (Germany):ro:
+German:de:Romanian (Germany, eliminate dead keys):ro_nodeadkeys:
+German:de:German (Dvorak):dvorak:
+German:de:German (Sun dead keys):sundeadkeys:
+German:de:German (Neo 2):neo:
+German:de:German (Macintosh):mac:
+German:de:German (Macintosh, eliminate dead keys):mac_nodeadkeys:
+German:de:Lower Sorbian:dsb:
+German:de:Lower Sorbian (qwertz):dsb_qwertz:
+German:de:German (qwerty):qwerty:
+German:de:Russian (Germany, phonetic):ru:
+German:de:German (US keyboard with German letters):us:
+German:de:German (with Hungarian letters and no dead keys):hu:
+German:de:German (Sun Type 6/7):sun_type6:
+Greek:gr:
+Greek:gr:Greek (simple):simple:
+Greek:gr:Greek (extended):extended:
+Greek:gr:Greek (eliminate dead keys):nodeadkeys:
+Greek:gr:Greek (polytonic):polytonic:
+Greek:gr:Greek (Sun Type 6/7):sun_type6:
+Hungarian:hu:
+Hungarian:hu:Hungarian (standard):standard:
+Hungarian:hu:Hungarian (eliminate dead keys):nodeadkeys:
+Hungarian:hu:Hungarian (qwerty):qwerty:
+Hungarian:hu:Hungarian (101/qwertz/comma/dead keys):101_qwertz_comma_dead:
+Hungarian:hu:Hungarian (101/qwertz/comma/eliminate dead keys):101_qwertz_comma_nodead:
+Hungarian:hu:Hungarian (101/qwertz/dot/dead keys):101_qwertz_dot_dead:
+Hungarian:hu:Hungarian (101/qwertz/dot/eliminate dead keys):101_qwertz_dot_nodead:
+Hungarian:hu:Hungarian (101/qwerty/comma/dead keys):101_qwerty_comma_dead:
+Hungarian:hu:Hungarian (101/qwerty/comma/eliminate dead keys):101_qwerty_comma_nodead:
+Hungarian:hu:Hungarian (101/qwerty/dot/dead keys):101_qwerty_dot_dead:
+Hungarian:hu:Hungarian (101/qwerty/dot/eliminate dead keys):101_qwerty_dot_nodead:
+Hungarian:hu:Hungarian (102/qwertz/comma/dead keys):102_qwertz_comma_dead:
+Hungarian:hu:Hungarian (102/qwertz/comma/eliminate dead keys):102_qwertz_comma_nodead:
+Hungarian:hu:Hungarian (102/qwertz/dot/dead keys):102_qwertz_dot_dead:
+Hungarian:hu:Hungarian (102/qwertz/dot/eliminate dead keys):102_qwertz_dot_nodead:
+Hungarian:hu:Hungarian (102/qwerty/comma/dead keys):102_qwerty_comma_dead:
+Hungarian:hu:Hungarian (102/qwerty/comma/eliminate dead keys):102_qwerty_comma_nodead:
+Hungarian:hu:Hungarian (102/qwerty/dot/dead keys):102_qwerty_dot_dead:
+Hungarian:hu:Hungarian (102/qwerty/dot/eliminate dead keys):102_qwerty_dot_nodead:
+Icelandic:is:
+Icelandic:is:Icelandic (Sun dead keys):Sundeadkeys:
+Icelandic:is:Icelandic (eliminate dead keys):nodeadkeys:
+Icelandic:is:Icelandic (Macintosh):mac:
+Icelandic:is:Icelandic (Dvorak):dvorak:
+Hebrew:il:
+Hebrew:il:Hebrew (lyx):lyx:
+Hebrew:il:Hebrew (phonetic):phonetic:
+Hebrew:il:Hebrew (Biblical, Tiro):biblical:
+Hebrew:il:Hebrew (Biblical, SIL phonetic):biblicalSIL:
+Italian:it:
+Italian:it:Italian (eliminate dead keys):nodeadkeys:
+Italian:it:Italian (Macintosh):mac:
+Italian:it:Italian (US keyboard with Italian letters):us:
+Italian:it:Georgian (Italy):geo:
+Italian:it:Italian (IBM 142):ibm:
+Italian:it:Italian (Sun Type 6/7):sun_type6:
+Japanese:jp:
+Japanese:jp:Japanese (Kana):kana:
+Japanese:jp:Japanese (Kana 86):kana86:
+Japanese:jp:Japanese (OADG 109A):OADG109A:
+Japanese:jp:Japanese (Macintosh):mac:
+Japanese:jp:Japanese (Dvorak):dvorak:
+Japanese:jp:Japanese (Sun Type 6):sun_type6:
+Japanese:jp:Japanese (Sun Type 7 - pc compatible):sun_type7:
+Japanese:jp:Japanese (Sun Type 7 - sun compatible):sun_type7_suncompat:
+Kyrgyz:kg:
+Kyrgyz:kg:Kyrgyz (phonetic):phonetic:
+Khmer (Cambodia):kh:
+Kazakh:kz:
+Kazakh:kz:Russian (Kazakhstan, with Kazakh):ruskaz:
+Kazakh:kz:Kazakh (with Russian):kazrus:
+Lao:la:
+Lao:la:Lao (STEA proposed standard layout):stea:
+Spanish (Latin American):latam:
+Spanish (Latin American):latam:Spanish (Latin American, eliminate dead keys):nodeadkeys:
+Spanish (Latin American):latam:Spanish (Latin American, include dead tilde):deadtilde:
+Spanish (Latin American):latam:Spanish (Latin American, Sun dead keys):sundeadkeys:
+Lithuanian:lt:
+Lithuanian:lt:Lithuanian (standard):std:
+Lithuanian:lt:Lithuanian (US keyboard with Lithuanian letters):us:
+Lithuanian:lt:Lithuanian (IBM LST 1205-92):ibm:
+Lithuanian:lt:Lithuanian (LEKP):lekp:
+Lithuanian:lt:Lithuanian (LEKPa):lekpa:
+Lithuanian:lt:Lithuanian (US Dvorak with Lithuanian letters):us_dvorak:
+Lithuanian:lt:Lithuanian (Sun Type 6/7):sun_type6:
+Latvian:lv:
+Latvian:lv:Latvian (apostrophe variant):apostrophe:
+Latvian:lv:Latvian (tilde variant):tilde:
+Latvian:lv:Latvian (F variant):fkey:
+Latvian:lv:Latvian (modern):modern:
+Latvian:lv:ŪGJRMV):ergonomic:
+Latvian:lv:Latvian (adapted):adapted:
+Latvian:lv:Latvian (US Dvorak):dvorak:
+Latvian:lv:Latvian (US Dvorak, Y variant):ykeydvorak:
+Latvian:lv:Latvian (US Dvorak, minus variant):minuskeydvorak:
+Latvian:lv:Latvian (programmer US Dvorak):dvorakprogr:
+Latvian:lv:Latvian (programmer US Dvorak, Y variant):ykeydvorakprogr:
+Latvian:lv:Latvian (programmer US Dvorak, minus variant):minuskeydvorakprogr:
+Latvian:lv:Latvian (US Colemak):colemak:
+Latvian:lv:Latvian (US Colemak, apostrophe variant):apostrophecolemak:
+Latvian:lv:Latvian (Sun Type 6/7):sun_type6:
+Maori:mao:
+Montenegrin:me:
+Montenegrin:me:Montenegrin (Cyrillic):cyrillic:
+Montenegrin:me:Montenegrin (Cyrillic, Z and ZHE swapped):cyrillicyz:
+Montenegrin:me:Montenegrin (Latin Unicode):latinunicode:
+Montenegrin:me:Montenegrin (Latin qwerty):latinyz:
+Montenegrin:me:Montenegrin (Latin Unicode qwerty):latinunicodeyz:
+Montenegrin:me:Montenegrin (Cyrillic with guillemets):cyrillicalternatequotes:
+Montenegrin:me:Montenegrin (Latin with guillemets):latinalternatequotes:
+Macedonian:mk:
+Macedonian:mk:Macedonian (eliminate dead keys):nodeadkeys:
+Maltese:mt:
+Maltese:mt:Maltese (with US layout):us:
+Mongolian:mn:
+Norwegian:no:
+Norwegian:no:Norwegian (eliminate dead keys):nodeadkeys:
+Norwegian:no:Norwegian (Dvorak):dvorak:
+Norwegian:no:Northern Saami (Norway):smi:
+Norwegian:no:Northern Saami (Norway, eliminate dead keys):smi_nodeadkeys:
+Norwegian:no:Norwegian (Macintosh):mac:
+Norwegian:no:Norwegian (Macintosh, eliminate dead keys):mac_nodeadkeys:
+Norwegian:no:Norwegian (Colemak):colemak:
+Norwegian:no:Norwegian (Sun Type 6/7):sun_type6:
+Polish:pl:
+Polish:pl:Polish (legacy):legacy:
+Polish:pl:Polish (qwertz):qwertz:
+Polish:pl:Polish (Dvorak):dvorak:
+Polish:pl:Polish (Dvorak, Polish quotes on quotemark key):dvorak_quotes:
+Polish:pl:Polish (Dvorak, Polish quotes on key 1):dvorak_altquotes:
+Polish:pl:Kashubian:csb:
+Polish:pl:Silesian:szl:
+Polish:pl:Russian (Poland, phonetic Dvorak):ru_phonetic_dvorak:
+Polish:pl:Polish (programmer Dvorak):dvp:
+Polish:pl:Polish (international with dead keys):intl:
+Polish:pl:Polish (Colemak):colemak:
+Polish:pl:Polish (Sun Type 6/7):type6:
+Portuguese:pt:
+Portuguese:pt:Portuguese (eliminate dead keys):nodeadkeys:
+Portuguese:pt:Portuguese (Sun dead keys):sundeadkeys:
+Portuguese:pt:Portuguese (Macintosh):mac:
+Portuguese:pt:Portuguese (Macintosh, eliminate dead keys):mac_nodeadkeys:
+Portuguese:pt:Portuguese (Macintosh, Sun dead keys):mac_sundeadkeys:
+Portuguese:pt:Portuguese (Nativo):nativo:
+Portuguese:pt:Portuguese (Nativo for USA keyboards):nativo-us:
+Portuguese:pt:Esperanto (Portugal, Nativo):nativo-epo:
+Portuguese:pt:Portuguese (Sun Type 6/7):sun_type6:
+Romanian:ro:
+Romanian:ro:Romanian (cedilla):cedilla:
+Romanian:ro:Romanian (standard):std:
+Romanian:ro:Romanian (standard cedilla):std_cedilla:
+Romanian:ro:Romanian (WinKeys):winkeys:
+Romanian:ro:Crimean Tatar (Dobruja Q):crh_dobruja:
+Romanian:ro:Romanian (ergonomic Touchtype):ergonomic:
+Romanian:ro:Romanian (Sun Type 6/7):type6:
+Russian:ru:
+Russian:ru:Russian (phonetic):phonetic:
+Russian:ru:Russian (phonetic WinKeys):phonetic_winkeys:
+Russian:ru:Russian (typewriter):typewriter:
+Russian:ru:Russian (legacy):legacy:
+Russian:ru:Russian (typewriter, legacy):typewriter-legacy:
+Russian:ru:Tatar:tt:
+Russian:ru:Ossetian (legacy):os_legacy:
+Russian:ru:Ossetian (WinKeys):os_winkeys:
+Russian:ru:Chuvash:cv:
+Russian:ru:Chuvash (Latin):cv_latin:
+Russian:ru:Udmurt:udm:
+Russian:ru:Komi:kom:
+Russian:ru:Yakut:sah:
+Russian:ru:Kalmyk:xal:
+Russian:ru:Russian (DOS):dos:
+Russian:ru:Serbian (Russia):srp:
+Russian:ru:Bashkirian:bak:
+Russian:ru:Mari:chm:
+Russian:ru:Church Slavonic:chu:
+Russian:ru:Russian (with Ukrainian-Belorussian layout):ruu:
+Russian:ru:Russian (Sun Type 6/7):type6:
+Serbian:rs:
+Serbian:rs:Serbian (Cyrillic, Z and ZHE swapped):yz:
+Serbian:rs:Serbian (Latin):latin:
+Serbian:rs:Serbian (Latin Unicode):latinunicode:
+Serbian:rs:Serbian (Latin qwerty):latinyz:
+Serbian:rs:Serbian (Latin Unicode qwerty):latinunicodeyz:
+Serbian:rs:Serbian (Cyrillic with guillemets):alternatequotes:
+Serbian:rs:Serbian (Latin with guillemets):latinalternatequotes:
+Serbian:rs:Pannonian Rusyn (homophonic):rue:
+Serbian:rs:Serbian (combining accents instead of dead keys):combiningkeys:
+Slovenian:si:
+Slovenian:si:Slovenian (use guillemets for quotes):alternatequotes:
+Slovenian:si:Slovenian (US keyboard with Slovenian letters):us:
+Slovak:sk:
+Slovak:sk:Slovak (extended Backslash):bksl:
+Slovak:sk:Slovak (qwerty):qwerty:
+Slovak:sk:Slovak (qwerty, extended Backslash):qwerty_bksl:
+Slovak:sk:Slovak (Sun Type 6/7):sun_type6:
+Spanish:es:
+Spanish:es:Spanish (eliminate dead keys):nodeadkeys:
+Spanish:es:Spanish (include dead tilde):deadtilde:
+Spanish:es:Spanish (Sun dead keys):sundeadkeys:
+Spanish:es:Spanish (Dvorak):dvorak:
+Spanish:es:Asturian (Spain, with bottom-dot H and bottom-dot L):ast:
+Spanish:es:Catalan (Spain, with middle-dot L):cat:
+Spanish:es:Spanish (Macintosh):mac:
+Spanish:es:Spanish (Sun Type 6/7):sun_type6:
+Swedish:se:
+Swedish:se:Swedish (eliminate dead keys):nodeadkeys:
+Swedish:se:Swedish (Dvorak):dvorak:
+Swedish:se:Russian (Sweden, phonetic):rus:
+Swedish:se:Russian (Sweden, phonetic, eliminate dead keys):rus_nodeadkeys:
+Swedish:se:Northern Saami (Sweden):smi:
+Swedish:se:Swedish (Macintosh):mac:
+Swedish:se:Swedish (Svdvorak):svdvorak:
+Swedish:se:Swedish Sign Language:swl:
+Swedish:se:Swedish (Sun Type 6/7):sun_type6:
+German (Switzerland):ch:
+German (Switzerland):ch:German (Switzerland, legacy):legacy:
+German (Switzerland):ch:German (Switzerland, eliminate dead keys):de_nodeadkeys:
+German (Switzerland):ch:German (Switzerland, Sun dead keys):de_sundeadkeys:
+German (Switzerland):ch:French (Switzerland):fr:
+German (Switzerland):ch:French (Switzerland, eliminate dead keys):fr_nodeadkeys:
+German (Switzerland):ch:French (Switzerland, Sun dead keys):fr_sundeadkeys:
+German (Switzerland):ch:French (Switzerland, Macintosh):fr_mac:
+German (Switzerland):ch:German (Switzerland, Macintosh):de_mac:
+German (Switzerland):ch:German (Switzerland, Sun Type 6/7):sun_type6_de:
+German (Switzerland):ch:French (Switzerland, Sun Type 6/7):sun_type6_fr:
+Arabic (Syria):sy:
+Arabic (Syria):sy:Syriac:syc:
+Arabic (Syria):sy:Syriac (phonetic):syc_phonetic:
+Arabic (Syria):sy:Kurdish (Syria, Latin Q):ku:
+Arabic (Syria):sy:Kurdish (Syria, F):ku_f:
+Arabic (Syria):sy:Kurdish (Syria, Latin Alt-Q):ku_alt:
+Tajik:tj:
+Tajik:tj:Tajik (legacy):legacy:
+Sinhala (phonetic):lk:
+Sinhala (phonetic):lk:Tamil (Sri Lanka, Unicode):tam_unicode:
+Sinhala (phonetic):lk:Tamil (Sri Lanka, TAB Typewriter):tam_TAB:
+Thai:th:
+Thai:th:Thai (TIS-820.2538):tis:
+Thai:th:Thai (Pattachote):pat:
+Turkish:tr:
+Turkish:tr:Turkish (F):f:
+Turkish:tr:Turkish (Alt-Q):alt:
+Turkish:tr:Turkish (Sun dead keys):sundeadkeys:
+Turkish:tr:Kurdish (Turkey, Latin Q):ku:
+Turkish:tr:Kurdish (Turkey, F):ku_f:
+Turkish:tr:Kurdish (Turkey, Latin Alt-Q):ku_alt:
+Turkish:tr:Turkish (international with dead keys):intl:
+Turkish:tr:Crimean Tatar (Turkish Q):crh:
+Turkish:tr:Crimean Tatar (Turkish F):crh_f:
+Turkish:tr:Crimean Tatar (Turkish Alt-Q):crh_alt:
+Turkish:tr:Turkish (Sun Type 6/7):sun_type6:
+Taiwanese:tw:
+Taiwanese:tw:Taiwanese (indigenous):indigenous:
+Taiwanese:tw:Saisiyat (Taiwan):saisiyat:
+Ukrainian:ua:
+Ukrainian:ua:Ukrainian (phonetic):phonetic:
+Ukrainian:ua:Ukrainian (typewriter):typewriter:
+Ukrainian:ua:Ukrainian (WinKeys):winkeys:
+Ukrainian:ua:Ukrainian (legacy):legacy:
+Ukrainian:ua:Ukrainian (standard RSTU):rstu:
+Ukrainian:ua:Russian (Ukraine, standard RSTU):rstu_ru:
+Ukrainian:ua:Ukrainian (homophonic):homophonic:
+Ukrainian:ua:Ukrainian (Sun Type 6/7):sun_type6:
+English (UK):gb:
+English (UK):gb:English (UK, extended WinKeys):extd:
+English (UK):gb:English (UK, international with dead keys):intl:
+English (UK):gb:English (UK, Dvorak):dvorak:
+English (UK):gb:English (UK, Dvorak with UK punctuation):dvorakukp:
+English (UK):gb:English (UK, Macintosh):mac:
+English (UK):gb:English (UK, Macintosh international):mac_intl:
+English (UK):gb:English (UK, Colemak):colemak:
+English (UK):gb:English (UK, Sun Type 6/7):sun_type6:
+Uzbek:uz:
+Uzbek:uz:Uzbek (Latin):latin:
+Vietnamese:vn:
+Korean:kr:
+Korean:kr:Korean (101/104 key compatible):kr104:
+Korean:kr:Korean (Sun Type 6/7):sun_type6:
+Japanese (PC-98xx Series):nec_vndr/jp:
+Irish:ie:
+Irish:ie:CloGaelach:CloGaelach:
+Irish:ie:Irish (UnicodeExpert):UnicodeExpert:
+Irish:ie:Ogham:ogam:
+Irish:ie:Ogham (IS434):ogam_is434:
+Urdu (Pakistan):pk:
+Urdu (Pakistan):pk:Urdu (Pakistan, CRULP):urd-crulp:
+Urdu (Pakistan):pk:Urdu (Pakistan, NLA):urd-nla:
+Urdu (Pakistan):pk:Arabic (Pakistan):ara:
+Urdu (Pakistan):pk:Sindhi:snd:
+Dhivehi:mv:
+English (South Africa):za:
+Esperanto:epo:
+Esperanto:epo:Esperanto (displaced semicolon and quote, obsolete):legacy:
+Nepali:np:
+English (Nigeria):ng:
+English (Nigeria):ng:Igbo:igbo:
+English (Nigeria):ng:Yoruba:yoruba:
+English (Nigeria):ng:Hausa:hausa:
+Amharic:et:
+Wolof:sn:
+Braille:brai:
+Braille:brai:Braille (left hand):left_hand:
+Braille:brai:Braille (right hand):right_hand:
+Turkmen:tm:
+Turkmen:tm:Turkmen (Alt-Q):alt:
+Bambara:ml:
+Bambara:ml:French (Mali, alternative):fr-oss:
+Bambara:ml:English (Mali, US Macintosh):us-mac:
+Bambara:ml:English (Mali, US international):us-intl:
+Swahili (Tanzania):tz:
+Swahili (Kenya):ke:
+Swahili (Kenya):ke:Kikuyu:kik:
+Tswana:bw:
+Filipino:ph:
+Filipino:ph:Filipino (QWERTY Baybayin):qwerty-bay:
+Filipino:ph:Filipino (Capewell-Dvorak Latin):capewell-dvorak:
+Filipino:ph:Filipino (Capewell-Dvorak Baybayin):capewell-dvorak-bay:
+Filipino:ph:Filipino (Capewell-QWERF 2006 Latin):capewell-qwerf2k6:
+Filipino:ph:Filipino (Capewell-QWERF 2006 Baybayin):capewell-qwerf2k6-bay:
+Filipino:ph:Filipino (Colemak Latin):colemak:
+Filipino:ph:Filipino (Colemak Baybayin):colemak-bay:
+Filipino:ph:Filipino (Dvorak Latin):dvorak:
+Filipino:ph:Filipino (Dvorak Baybayin):dvorak-bay:
+Moldavian:md:
+Moldavian:md:Moldavian (Gagauz):gag:
+APL keyboard symbols:apl:
+APL keyboard symbols:apl:APL keyboard symbols (Dyalog):dyalog:
+APL keyboard symbols:apl:APL keyboard symbols (sax):sax:
+APL keyboard symbols:apl:APL keyboard symbols (unified):unified:
+APL keyboard symbols:apl:APL keyboard symbols (IBM APL2):apl2:
+APL keyboard symbols:apl:APL keyboard symbols (Manugistics APL*PLUS II):aplplusII:
+APL keyboard symbols:apl:APL keyboard symbols (APLX unified):aplx:
