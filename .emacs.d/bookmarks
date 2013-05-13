@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("UNIX.org"
+(("diary.org"
+ (filename . "~/Dropbox/枯禅竹/diary.org")
+ (front-context-string . "\n* 简录一生\n** 2012年")
+ (rear-context-string)
+ (position . 1))
+("UNIX.org"
  (filename . "~/Dropbox/note/UNIX.org")
  (front-context-string . "#+STYLE: <link r")
  (rear-context-string)
