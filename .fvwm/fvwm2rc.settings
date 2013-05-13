@@ -1,0 +1,26 @@
+DeskTopSize 4x1
+IgnoreModifiers L25
+SnapAttraction 5
+EdgeScroll 0 0
+EdgeResistance 1000 20
+EdgeThickness 1
+ClickTime 250
+OpaqueMoveSize unlimited
+HideGeometryWindow Always
+BugOpts FlickeringMoveWorkaround True
+BugOpts ExplainWindowPlacement
+SnapGrid 1 1
+ColormapFocus FollowsFocus
+EwmhBaseStruts 0 0 0 26
+
+Style * Colorset 1, HilightColorset 2
+Style * Font "Shadow=1 1 SE:xft:sans:pixelsize=10:minspace=True"
+Style * DecorateTransient 
+Style * IconBox 3 3 10 $[vp.height], ClickToFocus, MouseFocusClickRaises, IconFill t l
+Style * NoIcon, NoIconTitle
+Style * BorderWidth 1, HandleWidth 1
+Style * WindowShadeSteps 0, ResizeOpaque
+Style * MinOverlapPercentPlacement
+Style "*" MWMFunctions
+Style "*" MWMDecor
+Style "*" OLDecor

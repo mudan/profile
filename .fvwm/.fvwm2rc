@@ -1,0 +1,43 @@
+#Version 0.7.0
+
+# Configurable Variables
+Read fvwm2rc.variables
+
+
+# Starting and Exiting
+
+
+# Start Function
+AddToFunc StartFunction
++ I Exec exec fvwm-root --dither --retain-pixmap ~/.fvwm/images/wp/ISLA.png
++ I Test (Restart) All (Iconic) Test (f /dev/shm/icon.tmp.$[w.id].png) WindowStyle IconOverride, Icon /dev/shm/icon.tmp.$[w.id].png
++ I Module FvwmProxy
+  + I Module FvwmButtons -g 250x30+05-2 FvwmAppLaunch
+  + I Module FvwmButtons -g 65x30+1200-2 FvwmClock
+  + I Module FvwmButtons -g 200x30+1065+420 FvwmMPD
++ I Module FvwmPager
+#+ I Test (Init) Conky
+
+#DestroyFunc Conky
+#AddToFunc Conky
+#+ I Exec exec conky
+
+## Starts gtk theme (makes the app menus look pretty)
+DestroyFunc InitFunction
+AddToFunc   InitFunction
+   + I Exec exec gnome-settings-daemon
+   
+# Exit Function
+AddToFunc ExitFunction
++ I Test (!ToRestart) Exec exec rm -f /dev/shm/icon.tmp.*
+
+Read fvwm2rc.settings
+Read fvwm2rc.bindings
+Read fvwm2rc.menus
+Read fvwm2rc.dock
+Read fvwm2rc.thumbnails
+Read fvwm2rc.misc
+Read themes/$[ThemeColor]/fvwm2rc.wmdeco
+Read themes/$[ThemeColor]/fvwm2rc.colorsets
+Read fvwm2rc.pager
+

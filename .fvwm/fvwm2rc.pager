@@ -1,0 +1,24 @@
+###############
+###FvwmPager###
+###############
+
+Style "FvwmPager" NoTitle, Sticky, WindowListSkip, StaysOnBottom, FixedSize, FixedPosition
+
+
+
+	DestroyModuleConfig FvwmPager: *
+	*FvwmPager: Font none
+	*FvwmPager: SmallFont none
+	*FvwmPager: Geometry 150x30+1040-2
+	*FvwmPager: Colorset * 77
+	*FvwmPager: HilightColorset * 8
+ 	*FvwmPager: BalloonColorset * 3
+	*FvwmPager: WindowColorsets 9 10
+	*FvwmPager: Balloons All
+	*FvwmPager: BalloonFont "xft:Sans:Bold:pixelsize=12:minspace=True:antialias=True"
+	*FvwmPager: BalloonYOffset +2
+	#*FvwmPager: MiniIcons
+	*FvwmPager: UseSkipList
+	*FvwmPager: Rows 1
+	*FvwmPager: SolidSeparators
+

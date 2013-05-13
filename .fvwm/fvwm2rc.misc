@@ -1,0 +1,27 @@
+#######################################
+# FvwmIdent (Left-Click on App's Icon in Titlebar)
+#######################################
+
+# FvwmIdent is an xwininfo replacement.
+DestroyModuleConfig FvwmIdent: *
+*FvwmIdent: Back #f1eee0
+*FvwmIdent: Fore #000000
+*FvwmIdent: Font "shadow=0 se:xft:AvantGarde LT Medium:size=8"
+
+#######################################
+# Alt-Esc for display of all windows
+#######################################
+
+DestroyModuleConfig FvwmProxy: *
+*FvwmProxy: Font "shadow=0 se:xft:AvantGarde LT Medium:size=8"
+*FvwmProxy: ProxyMove false
+*FvwmProxy: Colorset 3
+*FvwmProxy: SelectColorset 4
+
+# FvwmScripts
+Style Calendar NoTitle
+Style CoverArt NoTitle
+
+# Override some of the (annoying) default cursors
+CursorStyle wait left_ptr
+CursorStyle sys left_ptr
