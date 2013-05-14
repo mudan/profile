@@ -771,6 +771,6 @@ auto-mode-alist))
 ;(global-set-key (kbd "<f7>")  'linum-mode)
 ;(put 'upcase-region 'disabled nil)
 ;; 注销 C-SPC,在输入法无法使用的时候可用
-;(global-set-key (kbd "C-SPC") 'nil)
+(global-set-key (kbd "C-SPC") 'nil)
 ;; 既然 emacs 默认 C-c C-c 为对源代码选区进行注释，那么就用我们就用 C-c C-v 进行反注释
 ;;(global-set-key "\C-c\C-v" 'uncomment-region)
