@@ -1,19 +1,20 @@
 "{{{ 杂项配置
-"set tags+=$DIR/tags	"tags 动态加载
+set tags+=$DIR/tags  "tags 动态加载
+set path=.,~/,,	"在定义的路径中搜索文件
 set viminfo^=%	"记住viminfo信息
 set showcmd	"显示未完成的命令
 set ruler	"显示当前光标位置
 set number	"显示行号
-set ai		"智能自动缩进
-set si		"设置自动缩进
-set wrap	"Wrap lines
+"set ai		"智能自动缩进
+"set si		"设置自动缩进
+"set wrap	"Wrap lines
+"set autoindent	"启动新行使用与前一行相同的缩进
 "set nocompatible	"不需要保持和 vi 非常兼容
 set backspace=2	"设置退格键可用
-"set autoindent	"启动新行使用与前一行相同的缩进
-set formatoptions+=mM	"正确处理中文字符的折行和拼接
 set fileencodings=ucs-bom,utf-8,gbk	"自动识别待 BOM 字符文件
+set formatoptions+=mM	"正确处理中文字符的折行和拼接
 set autoread	"自动读档
-set history=50	"保存50个命令及查找历史
+set history=400	"保存50个命令及查找历史
 set list	"显示 TAB 和 $
 set listchars=tab:\|\ ,
 set shiftwidth=4		"现在自动缩进将是4个字符
@@ -69,6 +70,20 @@ endif
 "        "set guioptions-=b       "隐藏底部滚动条
 "        "set showtabline=0       "隐藏Tab栏
 "endif
+
+"在windows下的编码设置
+"set encoding=utf-8
+"set fileencodings=utf-8,chinese,latin-1
+"if has("win32")
+"set fileencoding=chinese
+"else
+"set fileencoding=utf-8
+"endif
+"解决菜单乱码
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
+"解决consle输出乱码
+"language messages zh_CN.utf-8
 "}}}
 
 "{{{ 函数定义
@@ -162,6 +177,11 @@ set ffs=unix,dos,mac
 "}}}
 
 " {{{ 快捷键定义
+
+" 标签快捷键操作
+map tn :tabnew<cr>
+map tc :tabclose<cr>
+
 " 插入模式下上下左右移动光标
 inoremap <c-h> <left>
 inoremap <c-l> <right>
@@ -175,9 +195,6 @@ map j gj
 map k gk
 " 普通模式下 Ctrl+c 复制文件路径
 nnoremap <c-c> :let @+ = expand('%:p')<cr>
-" 标签快捷键操作
-map tn :tabnew<cr>
-map tc :tabclose<cr>
 "insert模式<F2>加入时间戳
 imap &lt;F2> &lt;C-R>=strftime("%c")&lt;CR>
 " Shift + Insert 插入系统剪切板中的内容
@@ -227,7 +244,7 @@ let NERDTreeShowBookmarks=1
 " 是否默认显示文件
 let NERDTreeShowFiles=1
 " 是否默认显示隐藏文件
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 " 是否默认显示行号
 let NERDTreeShowLineNumbers=1
 " 窗口位置（'left' or 'right'）
@@ -259,7 +276,7 @@ endfunction
 "{{{ vimwiki
 
 let g:vimwiki_w32_dir_enc = 'utf-8'
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
+let g:vimwiki_list = [{'path': 'd:/mudan/note/vimwiki/'}]
 let g:vimwiki_camel_case = 0
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_folding = 0
@@ -290,4 +307,18 @@ let g:tagbar_type_markdown = {
             \ 'k:Heading_L3'
             \ ]
             \ }
+"}}}
+"}}}
+
+"{{{ taglist
+
+"if MySys() == "windows"
+"  let Tlist_Ctags_Cmd = 'ctags'
+"elseif MySys() == "linux"
+"  let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+"endif
+"let Tlist_Show_One_File = 1
+"let Tlist_Exit_OnlyWindow = 1
+"let Tlist_Use_Right_Window = 1
+"nmap <silent> <leader>tl :Tlist<cr>
 "}}}
