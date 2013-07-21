@@ -62,6 +62,18 @@ if &t_Co > 2 || has("gui_running")
     set hlsearch
 endif
 
+"更新最近修改时间和文件名
+function UpdateTitle()
+    normal m'
+    execute '/# *Last modified:/s@:.*$@\=strftime(":\t%Y-%m-%d %H:%M")@'
+    normal ''
+    normal mk
+    execute '/# *Filename:/s@:.*$@\=":\t\t".expand("%:t")@'
+    execute "noh"
+    normal 'k
+    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
+endfunction
+
 "if has("gui_running")
 "        set guioptions-=m       "隐藏菜单栏
 "        set guioptions-=T       "隐藏工具栏
@@ -276,7 +288,7 @@ endfunction
 "{{{ vimwiki
 
 let g:vimwiki_w32_dir_enc = 'utf-8'
-let g:vimwiki_list = [{'path': 'd:/mudan/note/vimwiki/'}]
+let g:vimwiki_list = [{'path': '~/mudan/note/vimwiki/'}]
 let g:vimwiki_camel_case = 0
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_folding = 0
