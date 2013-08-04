@@ -200,6 +200,10 @@ inoremap <c-l> <right>
 inoremap <c-j> <c-o>gj
 inoremap <c-k> <c-o>gk
 
+" 整行上下移动
+map <M-Up> dd<Up><Up>p 
+map <M-Down> ddp 
+
 " 选中模式 Ctrl+c 复制选中的文本
 vnoremap <c-c> "+y
 " 直接按 j/k 移动多列行
