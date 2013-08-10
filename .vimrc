@@ -96,6 +96,8 @@ endfunction
 "source $VIMRUNTIME/menu.vim
 "解决consle输出乱码
 "language messages zh_CN.utf-8
+"解决双引号被当作单字节显示
+"set ambiwidth=double
 "}}}
 
 "{{{ 函数定义
