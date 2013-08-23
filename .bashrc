@@ -14,6 +14,7 @@ else
     export PS1="\[\e]2;\u@\H \w\a\e[32;1m\]>\[\e[0m\] " 
 fi
 
+alias pon='pon dsl-provider'
 alias fbterm='LANG=zh_CN.utf-8 LC_ALL=zh_CN.UTF-8 fcitx-fbterm-helper'
 alias thunder='wine ~/.wine/dosdevices/c:/Program\ Files/Thunder/Thunder.exe'
 alias ll='ls -alF'
