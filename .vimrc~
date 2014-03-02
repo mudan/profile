@@ -33,7 +33,7 @@ set formatoptions+=mM	"正确处理中文字符的折行和拼接
 set autoread	"自动读档
 set history=400	"保存50个命令及查找历史
 set list	"显示 TAB 和 $
-"set listchars=tab:\|\ ,
+set listchars=tab:\|\ ,
 set shiftwidth=4		"现在自动缩进将是4个字符
 set autowrite	"自动保存
 "set backup	"保存后生成备份文件

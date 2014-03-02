@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/etc/fonts/conf.d'
-let g:netrw_dirhist_2='/home/mudan'
-let g:netrw_dirhist_3='/mnt/sda5'
-let g:netrw_dirhist_4='/home/mudan/.vim'
